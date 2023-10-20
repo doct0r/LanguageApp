@@ -23,6 +23,7 @@ jobs:
 
           # Download translations options
           download_translations: true
+          download_language: 'fr'
           push_translations: true
           commit_message: 'New Crowdin translations by GitHub Action'
 
