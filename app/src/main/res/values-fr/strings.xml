@@ -2,4 +2,5 @@
 <resources>
     <string name="hello_world">Hello world</string>
     <string name="app_name">Aqualite</string>
+    <string name="settings">Parametres</string>
 </resources>
