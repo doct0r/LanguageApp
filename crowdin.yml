@@ -6,3 +6,8 @@ files:
   - source: /**/values/*.xml
     translation: /**/values-%android-code%/%original_file_name%
     # translate_attributes: 0
+    languages_mapping:
+      android_code:
+        fr: fr
+        da: da
+        nl: nl
