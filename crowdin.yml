@@ -4,7 +4,7 @@ preserve_hierarchy: true
 
 files:
   - source: /**/values/*.xml
-    translation: /**/values-%android-code%/%original_file_name%
+    translation: /**/values-%android_code%/%original_file_name%
     translate_attributes: 0
     languages_mapping:
       android_code:
