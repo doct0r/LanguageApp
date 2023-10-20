@@ -22,8 +22,8 @@ jobs:
           push_sources: true
 
           # Download translations options
-          # download_translations: true
-          # push_translations: true
+          download_translations: true
+          push_translations: true
           commit_message: 'New Crowdin translations by GitHub Action'
 
           # This is the name of the git branch that Crowdin will create when opening a pull request.
