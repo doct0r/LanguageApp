@@ -7,7 +7,7 @@ on:
     branches: [ main ]
     
 jobs:
-  synchronize-with-crowdin:
+  upload-to-crowdin:
     runs-on: ubuntu-latest
 
     steps:
