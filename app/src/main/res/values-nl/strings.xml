@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hello_world">Hello world</string>
+    <string name="app_named">Aquality</string>
+    <string name="settings">Instellingen</string>
+    <string name="options">Opties</string>
+    <string name="street">straat</string>
 </resources>
