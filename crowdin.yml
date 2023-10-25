@@ -3,8 +3,8 @@ api_token_env: CROWDIN_PERSONAL_TOKEN
 preserve_hierarchy: true
 
 files:
-  - source: app/src/main/res/values/*.xml
-    translation: app/src/main/res/values-%android_code%/%original_file_name%
+  - source: /**/values/*.xml
+    translation: /**/values-%android_code%/%original_file_name%
     translate_attributes: 0
     languages_mapping:
       android_code:
