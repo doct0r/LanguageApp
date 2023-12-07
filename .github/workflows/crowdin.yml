@@ -1,6 +1,7 @@
 name: Crowdin Upload
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - '**.xml'
