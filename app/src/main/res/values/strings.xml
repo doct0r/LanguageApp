@@ -8,4 +8,5 @@
     <string name="street">street</string>
     <string name="road">road</string>
     <string name="desk">desk</string>
+    <string name="bike">desk</string>
 </resources>
