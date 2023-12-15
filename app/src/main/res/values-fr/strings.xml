@@ -6,4 +6,5 @@
     <string name="options">Optiones</string>
     <string name="street">rue</string>
     <string name="road">route</string>
+    <string name="desk">bureau</string>
 </resources>
