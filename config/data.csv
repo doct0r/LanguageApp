@@ -1,29 +1,3 @@
 repository;title;labels;description
 doct0r/kpniotworkshop;[iOS] Update Firebase SDK to latest;Epic;Test Description
-doct0r/kpniotworkshop;[IOS] Create release checklist;Story;---------------------- 
-Description: 
----------------------- 
-Deltares have asked us to share a release checklist based on the changes we have made to the process 
-
---------------------------- 
-AC/Scope 
---------------------------- 
-* Identify new elements we need to highlight� 
-* Use the one we have internally and enhance it accounting for their lack of knowledge of the new things we added 
-* Our release checklist: [https://ibm.ent.box.com/notes/1383575917328]� 
-
-�������������� 
-Keys/Strings/translations 
----------------------------- 
-||Key||EN||NL||FR||DA|| 
-
----------------------------- 
-Test Plan 
----------------------------- 
-Tested on: Device, OS version, app version 
-Server: Test/Prod 
-Languages: EN, DK, FR, NL 
-Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again� on the Tutorial Page, Have submitted measurements on home screen 
-Test cases 
-Screen:"
+doct0r/kpniotworkshop;[IOS] Create release checklist;Story;More test description
