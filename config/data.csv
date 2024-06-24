@@ -6,7 +6,7 @@ When you have previously logged in with Google and logged out again: the second 
 Desired behaviour: 
 
 Allow users to log in again manually (entering mail and password) after having previously logged in with Google and logged out."
-doct0r/kpniotworkshop;[iOS] Update Firebase SDK to latest;Epic;
+doct0r/kpniotworkshop;[iOS] Update Firebase SDK to latest;Epic;Test Description
 doct0r/kpniotworkshop;[IOS] Create release checklist;Story;---------------------- 
 Description: 
 ---------------------- 
