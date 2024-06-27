@@ -1,49 +1,23 @@
 ﻿Summary;Issue Type;Priority;Description
-[DEV_IOS] Filter on Group & Soil Nmin on map doesn't show your own measurements;Bug;Medium;"*Tested on:* iOS 17.4.1; Model: Iphone SE; app version 5.2.1 (344) 
+ Remove auto log in, when logging in with Google account;Story;High;"Current behaviour: 
 
-When filtering on a Group & Soil Nmin as sample type on map, your own measurements aren't shown.  
+When you have previously logged in with Google, and logged out again: the second time, and all times after that, when you log in with google, you get automatically logged in without having to input username or password. So in the case that someone changes their google details they can't change account. Even after having reinstalled the app multiple times and deleted all app data, you still log in automatically when pressing google log in.  
+
+Desired behaviour: 
+
+Allow users to log in again manually (entering mail and password) after having previously logged in with Google and logged out."
+ Previous sample & soil type not remembered when editing with filter active;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 6.0.2 (13137) 
 
 *Current* 
-* Open map 
-* Filter on  
-** Parameter: Nitrate 
-** Sample type: Soil Nmin 
-** Privacy and Sharing: A group 
-* *Your own Soil Nmin measurements part of that group aren't shown on the map. Other user's Soil Nmin measurements are shown.* 
+* Apply a filter (group or group+own) 
+* Tap on own measurement  
+* Tap on edit 
+* Tap on Sample or Soil Type 
+* *No radio button is filled to visualise the current choice* 
 
 *Expected* 
-* *Your own* *and other users'* {*}Soil Nmin measurements part of that group are shown{*}{*}{*} 
-
-_(Note: Filtering on Parameter: Nitrate; Sample type: Show all; Privacy and Sharing: A group - works)_"
-[DEV_IOS] Edit username update;Story;Medium;"---------------------- 
-Description: 
----------------------- 
-To deter users from changing their username multiple times, we are moving this feature to the menu, along with log out and delete account. 
-
-What screens are impacted:  
-* Profile page: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=13209%3A69870&mode=dev&t=7bmWIGwJjp9Clsmu-1] 
-
---------------------------- 
-AC/Scope 
---------------------------- 
-
-—————————————— 
-Keys/Strings/translations 
----------------------------- 
-||Key||EN||NL||FR||DA|| 
-| |Edit username|Gebruikersnaam bewerken|Modifier le nom d'utilisateur|Rediger brugernavn| 
-
----------------------------- 
-Test Plan 
----------------------------- 
-Tested on: Device, OS version, app version 
-Server: Test/Prod 
-Languages: EN, DK, FR, NL 
-Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
-Test cases 
-Screen:"
-[DEV_IOS] Move ID share functionality to profile screen;Story;Medium;"---------------------- 
+* *A radio button is filled to visualise the current choice*"
+ Move ID share functionality to profile screen;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 
@@ -78,60 +52,7 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
-[DEV_IOS] can't dismiss keyboard when adding members;Bug;Medium;"When adding members to a group, you cannot dismiss the keyboard, which prevents users from seeing which members they have already added.  
-
-Making it possible to dismiss the keyboard by clicking outside of the keyboard, or alternatively making the member list scrollable so it can reach above the keyboard would solve this issue."
-[DEV_IOS] Add info screen to NO3/NO3-N switch on manual input screen;Story;Medium;"Description: 
-
-On the manual input screen, the user has the option to switch between NO3 and NO3-N for nitrate, but there is no explanation on what it means for users who are not familiar with the difference. Therefore, we should add the info screen that we also use in the settings to explain the difference between NO3 and NO3-N. (See attached photos) 
-* add the (i) icon to the pop-up where you select between NO3 and NO3-N 
-* add the info screen that we also use in the settings 
-
-  
-
-See Figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7245-39840&mode=design&t=v4Bcb4Yqhiel7OOx-4] "
-[DEV_IOS] Update Privacy and Sharing filter on map;Story;Medium;"{color:#de350b}This is related to the new map filter to be implemented SADA-1176 and SADA-1179{color} 
-
----------------------- 
-Description: 
----------------------- 
-
-Now that users can filter on Groups on the map, we would like to make the different filters for Privacy and Sharing more clear. Currently, when a user filter on ""My private measurements"", both measurements that are private and shared with groups are shown. We would like to change this filter to ""Only my measurements"" which would then include all the user's measurements (public, private and group) - like the home screen when there's no filter applied.  
-
-We need to make two changes:  
-# Update ""My private measurements"" to ""Only my measurements"" 
-# Make the users' public measurements visible too when selecting ""Only my measurements"" 
-
-Overview of the new filter options: 
-* All public measurements (from ALL users) 
-* Only my measurements (my public, private and group measurements) 
-* Group (measurements from all users in 1 selected group) 
-
-  
-
-What screens are impacted: * 
-* Privacy and Sharing filter on the map 
-
---------------------------- 
-AC/Scope 
---------------------------- 
-
-—————————————— 
-Keys/Strings/translations 
----------------------------- 
-||Key||EN||NL||FR||DA|| 
-
----------------------------- 
-Test Plan 
----------------------------- 
-Tested on: Device, OS version, app version 
-Server: Test/Prod 
-Languages: EN, DK, FR, NL 
-Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
-Test cases 
-Screen:"
-[DEV_IOS] Update FAQs for deleting and downloading measurements;Story;Medium;"---------------------- 
+ Update FAQs for deleting and downloading measurements;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 New text for FAQs to be updated to let the user know how they can delete and download their measurements, and group measurements for admins. 
@@ -169,12 +90,24 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
-[DEV_iOS][DESIGN_TECH] Replace OpenGL ES;Feature;Medium;"The iOS app ({*}what about Android?{*}) is using OpenGL ES which is deprecated since iOS 12. Apple might stop support with a new version of iOS and there are better alternatives anyway (Vulkan, Metal) so we should move to one of those. 
+ Selecting a soil nmin weight on devices with very small screens is difficult or even impossible;Bug;Medium;"*Repro:* 
 
-Instead of replacing it outright, we could consider using a wrapper to Metal e.g. [https://moltengl.com/moltengl/] , [https://github.com/openglonmetal/MGL] or [https://github.com/kakashidinho/metalangle]  
+Start a soil nmin measurement 
 
-Depending on the situation on Android and if we assume the OpenGL code is shared between the platforms we could consider migrating the code to Vulkan since there are more options on running this on multiple platforms."
-[DEV_IOS] Update flow of group settings;Story;Medium;"---------------------- 
+Go to Weight 
+
+*Behaviour:* 
+
+In the screenshots it can be observed that the weight input is not visible and sometimes not even the Done button, making it impossible to add weight if the screen size is too small. (Emulated 3.7"" 480 x 800hdpi Nexus one and 4.65"" 720p Galaxy Nexus) 
+
+!Screenshot 2024-06-14 at 14.54.18.png|width=194,height=289!!image-2024-06-14-14-55-23-201.png|width=194,height=251! 
+
+  
+
+*Proposed solution:* 
+
+Hide map on this screen if the screen height is below a certain value."
+ Update flow of group settings;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 
@@ -211,120 +144,44 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
-[DEV_IOS] Organisation screen is fullscreen instead of swipe down;Bug;Medium;Think about how this behaviour should work
-[DEV_IOS] Discarding an edited measurement takes user to home screen;Bug;Medium;"*Tested on:* iOS 16.6; Model: Iphone SE; app version 5.0.3 (134); server: test 
-
-*Current situation* 
-* Open app 
-* Tap on a measurement on home screen 
-* Tap on edit on measurement details screen 
-* Edit any field/value/position of the measurement 
-* Tap on 'X' button 
-* Tap on 'Yes' on the pop-up that asks if user wants to discard changes 
-* *user returns to home screen* 
-
-*Expected:* 
-* Open app 
-* Tap on a measurement on home screen 
-* Tap on edit on measurement details screen 
-* Edit any field/value/position of the measurement 
-* Tap on 'X' button 
-* Tap on 'Yes' on the pop-up that asks if user wants to discard changes 
-* *user returns to measurement details screen* (so the user can see that changes were discarded) (see screenshot figma) 
-
-*Figma:* https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=5466%3A34816&mode=design&t=Gttno0jXcp4HKCRP-1"
-[DEV_IOS] User doesn't arrive at home screen after submitting a measurement;Bug;Medium;"User should always arrive at home screen after submitting a measurement - even though user tapped + from any other screen (map, settings, profile).  
+ User doesn't arrive at home screen after submitting a measurement (only after NL results);Bug;Medium;"User should always arrive at home screen after submitting a measurement - even though user tapped plus from any other screen (map, settings, profile).  
 
 *Current* 
 * Tap on plus from any other screen than home 
-* create a measurement (either with or without NL results screen) 
+* create a measurement so you get the +NL results screen+ 
 * submit 
 * *arrive at the screen user was at when tapping +* 
 
 *Expected* 
 * *arrive at home screen*"
-[IOS] Create release checklist;Story;Medium;"---------------------- 
-Description: 
----------------------- 
-Deltares have asked us to share a release checklist based on the changes we have made to the process 
-
---------------------------- 
-AC/Scope 
---------------------------- 
-* Identify new elements we need to highlight  
-* Use the one we have internally and enhance it accounting for their lack of knowledge of the new things we added 
-* Our release checklist: [https://ibm.ent.box.com/notes/1383575917328]  
-
-—————————————— 
-Keys/Strings/translations 
----------------------------- 
-||Key||EN||NL||FR||DA|| 
-
----------------------------- 
-Test Plan 
----------------------------- 
-Tested on: Device, OS version, app version 
-Server: Test/Prod 
-Languages: EN, DK, FR, NL 
-Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
-Test cases 
-Screen:"
-[DEV_IOS] Changing tabs in manual input affects swiping between tabs on home screen;Bug;Medium;"*Tested on:* iOS 17.5.1; Model: Iphone SE; app version 6.1 (396) 
-
-Changing the tabs in manual input (accessed from camera) affects the swiping between tabs on home screen after submitting a measurement.  
+ Editing with filter active doesn't apply changes until filter is cleared;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 6.0.2 (13137) 
 
 *Current* 
-
-Note: you can start the test on any parameter tab on home screen, to explain it, here is one example:  
-* start on Nitrate tab 
-
-* tap on + 
-
-* tap on manual input 
-
-* change to Ammonium tab 
-
-* input value 
-
-* submit measurement 
-* user arrive at ammonium tab 
-* swipe to the left 
-* *user goes to Nitrate tab* (the tab where user started before taking the measurement) 
-* swipe to the right 
-* *user goes to Ammonium tab* (back to the one related to the previous measurement) 
+* Apply a filter (group or group+own) 
+* Tap on own measurement 
+* Edit any field 
+* Save 
+* Edits are applied on measurement details 
+* go back to home screen 
+* *+edit is not+ applied on home screen (if value was edited)* 
+* tap on the measurement again 
+* *+previous+ details are shown* 
+* go back to home screen and clear filter - edit is applied everywhere 
 
 *Expected* 
-* start on Nitrate tab 
+* Apply a filter (group or group+own) 
+* Tap on own measurement 
+* Edit any field 
+* Save 
+* Edits are applied on measurement details 
+* go back to home screen 
+* *+edit is+ applied on home screen (if value was edited)* 
+* tap on the measurement again 
+* *+new+ details are shown*"
+ When killing app and reopening it, remember filters;Story;Medium;"At the moment, when the app is killed and reopened, the filter a logged in user had applied will be lost and needs to be reapplied. 
 
-* tap on + 
-
-* tap on manual input 
-
-* change to Ammonium tab 
-
-* input value 
-
-* submit measurement 
-* user arrive at ammonium tab 
-* swipe to the left 
-* *user goes to Phosphate tab* 
-* swipe to the right 
-* *user goes to Salinity tab* "
-[DEV_iOS] Refactor Measurement (Send) Detail Page;Story;Medium;"Currently we have two different detail pages: 
-* initial measurement 
-* read/edit measurement 
-
-With this story we like to refactor this into one viewcontroller that can handle both scenarios. 
-
-Also, show the selected nitrate unit always first (now NO3 shows first) 
-
-Fix SADA-1002  
-
-*AC:* 
-* Add subtext for visibilities 
-* .."
-[DEV_IOS] NH4-N vs NH4;Story;Medium;"---------------------- 
+We'd like to keep the filter on for users who will only be filtering on their group measurements"
+ NH4-N vs NH4;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 
@@ -361,282 +218,55 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
-[DEV_IOS] Map doesn't go to offline mode unless you turn off the internet while at the map;Bug;Medium;"*Current* 
+ Disabling the GPS spams the user with pop ups about improving the experience by turning on location;Bug;Medium;"*Repro:* 
 
-The only way to show the map on offline mode is to be at the map, then turn off internet.  
+Disable the GPS location from the Android device settings 
 
-*Expected* 
+*Actual:* 
 
-The popup should come the first time you open the map and are offline and the no internet sign should remain at all times when there's no internet"
-[DEV_iOS] When you add a measurement while offline you don't see it in the overview list;Bug;Medium;
-[DEV_IOS] Can add myself as a member of a group, I am now Admin and member;Bug;Medium;"*Current* 
-# Create group 
-# Add members 
-# Type in your own AqualityID 
-# 'Admin, member' appears next to your name (you are now Admin AND member) 
+Going through the app will keep triggering the ""For a better experience, turn on device location, which uses Google's location service"" popup (see screenshot) over and over again. (On the map screen, after taking a measurement, on login/logout etc) 
 
 
-*Expected* 
-# Create group 
-# Add members 
-# Type in your own AqualityID 
-# Error should show saying 'member already part of group'"
-[DEV_IOS] Spacing between paragraphs on all info screens is too large;Bug;Medium;"*Tested on:* iOS 17.4.1; Model: Iphone SE; app version 5.2.1 (347) 
 
-Spacing between paragraphs on all info screens throughout the app is too large. 
+*Expected:* 
 
-See screenshots for examples"
-[DEV_IOS] Automatically logged in on fresh install;Bug;Medium;"*Current* 
-# Delete app 
-# Reinstall app 
-# Go to profile 
-# Press log in 
-# *Automatically logs in without Amazon portal appearing* 
+Tapping *No, thanks* once should be enough to not see it until the app is killed and reopened"
+ webshop image overlaps with text;Bug;Medium;In the webshop, when selecting Salinity -> Stickers -> Print manually , the image of the salinity meter overlaps with the text (see screenshot)
+ Link to Hach strips has an icon at the end of it that takes you to the app webshop when clicked;Bug;Medium;In the tutorial there is a link to the Hach test strips that should take you to the Hach website. At the end of that link there is an icon (hyperlink) that is actually a different link that points to the webshop within the app. This should all be one link to the Hach website.
+ Image colors are calculated on DB values and not rounded values;Bug;Medium;"Some scenarios will cause the frontend to display two different colors for the same value. 
+  
+Below is a example 
 
-*Expected* 
-# Delete app 
-# Reinstall app 
-# Go to profile 
-# Press log in 
-# *Amazon modal pops up with options to sign in*"
-[DEV_IOS] Info button is very close to the ‘Select default sample type’ text;Bug;Medium;"*Current* 
-# Delete app 
-# Re-install 
-# Press blue button 
-# Instructions appear 
-# Press continue 
-# Default sample type pop up 
-# *Info button is too close to 'Select default sample type' title (see image attached)* 
+1) Take a measurement as 2 mg/l PO4-P 
+  
+2) Then take a measurement as 6.13 mg/L PO4 
+  
+3) Then go to home 
+  
+4) You will have 2 measurements of the same value, but different colours"
+ Soil nmin sample type not populating after being on the salinity tab;Bug;Medium;"*Repro:* 
+# Set your default sample type to Soil Nmin 
+# Start a new measurement 
+# Select the Salinity tab (probably works with Phosphate and Ammonium too) 
+# Add a value (e.g. 1) 
+# Tap on Done 
+# Tap the native Android back button 
+# Tap on the Nitrate tab 
+# Enter a value (e.g. 2) 
+# Tap on Done *Expected:* Soil Nmin should be selected {*}Actual{*}: Select sample type is seen instead 
+# Tap on the Sample Type 
+# Select Soil Nmin *Expected:* Soil Nmin should be dark blue and font franca_medium *Actual:* The font is light blue, italic (see attachment) "
+Sometimes the soil layers don't load on time;Bug;Medium;Not clear how to reproduce, but sometimes the background service that loads the Dutch ground layers doesn't load on time and the Continue button that leads to the Results screen does not appear
+[Dependency on Rudie] Change Nitrate (soil Nmin) to Soil Nmin and Nitrate (water) to Nitrate;Story;Medium;"Nitrate (Soil Nmin) isn't actually measuring Nitrate in Soil. It is it's own thing so should actually just be called 'Soil Nmin'. 
 
   
 
-*Expected* 
-# Delete app 
-# Re-install 
-# Press blue button 
-# Instructions appear 
-# Press continue 
-# Default sample type pop up 
-# *Info button is on the right of the pop up (same as other pop ups)*"
-[DEV_IOS] Default group in settings doesn’t save when logging out and back in again;Bug;Medium;"*Current* 
-# Set 'Group x' as default Privacy in settings 
-# Log out 
-# Log in 
-# *Private is the default privacy* 
-
-  
-
-*Expected* 
-# Set 'Group x' as default privacy in settings 
-# Log out 
-# Log in 
-# *Group x is default privacy setting*"
-[DEV_IOS] Hach test strips link in tutorial & webshop is wrong in ENG;Bug;Medium;"*Tested on:* iOS 17.4.1; Model: Iphone SE; app version 5.2.1 (3) 
-
-*IN ENG ONLY* 
-
-The Hach test strips link in the tutorial & webshop directs you to the Hach website where you need to select your region. Once you've done this you're redirected to the general page for that region, not directly to specific test trips. 
-
-See sub-tasks for more details."
-[DEV_IOS] Tapping twice on a measurement detail disables save button;Bug;Medium;"*Tested on:* iOS 17.4.1; Model: Iphone SE; app version 5.2.1 (344) 
-
-Tapping twice on a measurement detail disables save button.  
-
-*Current* 
-* Tap on a measurement on home screen 
-* Tap on edit 
-* Tap on any field to edit, for example sample type 
-* Change sample type to Groundwater 
-* Save button enables 
-* Tap on sample type again 
-* Tap on Groundwater again 
-* *Save button disables (see screen rec)* 
-
-*Expected* 
-* *Save button remains enabled*"
-[DEV_IOS] Error message sometimes doesn't appear instantly or at all;Bug;Medium;"*Reproduction steps* 
-* Turn off internet 
-* Open app 
-* Open map 
-
-*Current* 
-* Error message doesn't show up instantly. Only after pressing the date modal one or a few times or turning on flightmode when the map is already open. Sometimes it doesn't show at all. 
-
-*Expected* 
-* Error message show up as soon as you open the map from any screen."
-[DEV_iOS] Editing a filtered measurement shows the success dialog for only a brief second instead of 3s;Bug;Medium;"{*}Repro{*}: 
-# Log in 
-# Filter by group 
-# Tap on a measurement that came from the filtering result 
-# Edit 
-# Change anything (soil type for example) 
-# Save 
-
-*Expected outcome:* 
-
-{color:#00875a}If the save was successful, the success dialog should be shown for *3s.*{color} 
-
-*Actual outcome:* 
-
-{color:#de350b}The success dialog shows for less than a second.{color}"
-[DEV_IOS] Refactor RIVM related files;Story;Medium;"Convert following files to swift: 
-- CategoryPercentiles.m 
-- PercentilePeriod.m 
-- NitratePercentile.m 
-- RivmSoilTypePercentileMatcher.m 
-- SoilTypeHelper 
-
-Move everything to a better location (only related to result screen)"
-[DEV_IOS] Update / add (alt) text throughout the app;Story;Medium;"Provide alternative text for meaningful images, logos, icons as well as all buttons need to be voiced over. 
-* Via your measurements : 
-** in ""your measurements"" screens : describe arrow button on the measurements to see details {color:#ffab00}""button to open options"" {color} 
-** in the ""measurement details"" +edit+ screens : describe arrow button for sample type and soil type {color:#ffab00}""button to open options"" {color} 
-** in ""measurement details"" screens : 
-*** describe the text and data in the blue field 
-*** describe the localization button in the map {color:#ffab00}""localization button""{color} 
-
-* Via map : 
-** In the upper time table : 
-*** Describe the arrows for previous and next week {color:#ffab00}""button previous week"" ""button next week"" {color} 
-*** Describe the arrow to open and close more options {color:#ffab00}""button to open the timelaps filter options"" {color} 
-*** Describe the slidebar {color:#ffab00}""slidebar"" {color} 
-** In the filter icons below : 
-*** When opening the filters : the arrow icons {color:#ffab00}""button to open options"" {color} 
-
-* Via profile: 
-** Describe the profile picture as {color:#ffab00}""This is the profile picture"" {color} 
-
-* Via settings : 
-** Describe the arrow icons in settings  {color:#ffab00}""Button"" {color} 
-** Describe the switch button for ""save picture on device {color:#ffab00}""Button"" {color} 
-** In FAQ : describe : the arrow icons in settings  {color:#ffab00}""Button""{color} 
-** In onboarding screens : describe swipe function {color:#ffab00}""Swipe button""{color} 
-** For attachments 6., 7., 8., 9. & 10. the title + a closing button need to be implemented {color:#ffab00}(Design needed from designers){color} 
-
-* Via new measurements : 
-** in the instructions screen: 
-*** Describe hyperlinks as {color:#ffab00}""link""{color} 
-*** Bulletpoints : the text after bulletpoints isn't voiced over in a proper order: First the bulletpoints are mentioned then the text below the bulletpoints and afterwards comes the text after the bulletpoints. This is incorrect. Text of bulletpoints should be mentioned throughout the bulletpoints."
-[DEV_IOS] Accommodate for Accessibility: Text size;Story;Medium;"---------------------- 
-*Description:* 
----------------------- 
-The user is able to see all text and use all buttons/functions in the app when they have enabled a larger text size in their phone's accessibility settings. The text size should be fixed and always the same size.  
-
-*What screens are impacted:* 
-* *All screens* (Home, Map, Camera, Manual input, Edit, Tutorial, Info, Settings (incl. each setting), Profile) 
-* *All buttons* 
-* *All pop-up/error messages* 
-
---------------------------- 
-*AC/Scope* 
---------------------------- 
-Things that are useful to know 
-- Log in/out: both in scope incl. amazon cognito website 
-- Which measurement type: all 
-
---------------------------- 
-
-*Keys/Strings/translations* 
----------------------------- 
-N/A 
----------------------------- 
-*Test Plan* 
----------------------------- 
-*Test on:* iOS 16.6; Model: Iphone SE; app version 5.0.3 (){*}{{*}}{*}Server:{*} Test 
-*Languages:* EN, DK, FR, NL 
-*Logged in:* Yes/No 
-*Pre-reqs:* Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
-  
-+*Test cases*+ 
-*Screen:*  
-
----------------------------- 
-*Screenshots* 
----------------------------- 
-See screenshots for where the text size is not fixed"
-[DEV_IOS] Investigate app secrets security;Spike;Medium;"This spike is timeboxed to 4 hours. 
-
-We should investigate the following: 
-* Move secrets from JSON files (cognito and signature) to keychain (or is there a better option) 
-* Is the GoogleService file (Firebase) safe enough? 
-* Can we obfuscate the code? 
-* Remove unused secrets (SEGES test and prod) - no need to investigate anything, just add to the followup story 
-  
- "
-[DEV_IOS] Updated map date picker;Story;Medium;"The date picker will be updated to allow users to more simply select the correct date range where they want to see their measurements on the map. 
-
-This will include removing the arrow from the current filter, removing the slider and adding a calendar for Week, Month and Year. 
-
-[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9152%3A4103&mode=dev&t=R02ut8Cldl5BH5Pj-1] 
-
- "
-[DEV_IOS] Update map filter;Story;Medium;"We will be updating the filter feature on the map screen so that all filter options are on 1 screen. 
-
-[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9081%3A113669&mode=dev&t=piOAXsrqd5BvhfI9-1] 
-
- "
-[DEV_IOS] Bug to story: App sometimes crashes when pressing back arrow on manual input screen;Bug;Medium;"App sometimes crashes when pressing back arrow on manual input screen (logged in and out) 
-
-*Found on:* iOS 16.6; Model: Iphone SE; app version 5.0.3 (160); server: test 
-
-*reproduction steps:* 
-* open app (logged in or out) 
-* tap on + 
-* tap on get started 
-* tap on manual measurement 
-* either add or don't add value 
-* switch to another tab 
-* tap on back arrow 
-* app crashes (not every time) 
-
- "
-[DEV_IOS] Issues with the internet error message for submitting a measurement;Bug;Medium;"*Tested on:* iOS 16.6; Model: Iphone SE; app version 5.0.3 (135); server: test 
-
-When the user doesn't have internet and taps to submit a new measurement, there is an error message notifying the user that there is no internet connection, but that the measurement will be saved and uploaded as soon as the connection is restored. There are two issues with this message, see sub-tasks.  
-h4."
-[DEV_iOS] Measurement repository can do create/update/delete;Story;Medium;"*Description* 
-
-With this MeasurementRepository we want to make it easier to deal with Measurements. Currently there is a lot of converting from strings to json and vice versa.  
-
-The refactoring should move capabilities from `SendMeasurements.h/.m` to the MeasurementRepository: 
-* Sending pending measurements in background 
-* Create a measurement 
-* Update a measurement 
-* Delete a measurement 
-
-  
-
-  
-{code:java} 
-`SendMeasurements.m` headers 
-  
-- (void) sendPendingMesurementsInBackground; 
-- (void) sendMeasurementToService: (NSString *) jsonData  checkErrors: (BOOL) checkErrors calledBy:(id)calledBy withSuccess:(SEL)successCallback andFailure:(SEL)failureCallback; 
-
-- (void) updateMeasurementToService: (NSString *) jsonData privacy:(NSString *)privacy checkErrors: (BOOL) checkErrors calledBy:(id)calledBy withSuccess:(SEL)successCallback andFailure:(SEL)failureCallback; 
-- (void) deleteMeasurementToService: (NSString *) jsonData checkErrors: (BOOL) checkErrors calledBy:(id)calledBy withSuccess:(SEL)successCallback andFailure:(SEL)failureCallback;{code} 
-  
-
-  
-
-*AC:* 
-* Create a measurement 
-* Update from sent measurement 
-* Delete from sent measurements 
-* Handle pending / send measurements from MeasurementRepository 
-* Unit tested 
-
-*Architecture idea:* 
-* Create a RemoteMeasurementRepository that is responsible for the network calls: 
-** get a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-get]) 
-** get all public measurements operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#_public_and_private_measurements)] 
-** get all private measurements operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#_public_and_private_measurements)] 
-** create a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-create]) 
-** update a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-update]) 
-** delete a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-delete)] 
-** search a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-search]) 
-* Extend the current MeasurementRepository with remote measurement capabilities"
-[DEV_iOS] LoginViewController to Swift;Story;Medium;"Description
+This would then mean Nitrate (water) is just Nitrate."
+;;;
+;;;
+;;;
+ Update the list of API error codes and their translations;Feature;Medium;Rudie added more API error codes, we should update our list as well to match it
+ Refactoring Profile Screen in Kotlin;Story;Medium;"Description
 
 Scenarios
 
@@ -700,196 +330,422 @@ When all stories have status ""Discovery Ready for Design/Development""
 - Testing coordinated by Test Manager
 - Sign-off Test Manager: Story to ""Done""
 - - - - - - - END DEVELOPMENT - - - - - - -"
-[DEV_iOS] Implement new networking;Story;Medium;"- Current networking requests are: 
+ Intelligent flow - Tutorial;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
 
-** MapViewController.m (NSURL) 
-*** fetchMeasurements 
-** SendMeasurements.m (NSURL) 
-*** post a measurement 
-*** update a measurement 
-*** delete a measurement 
-** AppDelegate.m (AFHTTPRequestOperation) 
-*** readMonitoringLocationsFromGeoJson 
-** 
-*** firstLoadHttp? still needed? 
-** LocationService.m (AFHTTPRequestOperation) 
-*** readLocationsFromGeoJson (not called?) 
-*AC:* 
+{*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the tutorial screen accordingly.  
 
-** Introduce a MeasurementService 
-*** get measurements (for the map) 
-*** create measurement 
-*** edit measurement 
-*** delete measurement 
-**  "
-[DEV_iOS] Measurement repository can handle sent / pending measurements;Story;Medium;"*Description* 
+Parameters can be: Nitrate, Salinity, Ammonium or Phosphate 
 
-With this MeasurementRepository we want to make it easier to deal with Measurements. Currently there is a lot of converting from strings to json and vice versa.  
-
-The refactoring should move capabilities from `SendMeasurements.h/.m` to the MeasurementRepository: 
-* Sending pending measurements in background 
-
-*AC:* 
-* Handle pending / send measurements from MeasurementRepository 
-* Unit tested"
-[DEV_IOS] Handle BE error messages properly;Story;Medium;"----------------------
-Description:
-----------------------
-A short description of what the story is and what is new etc...
-
-What screens are impacted: * 
-
----------------------------
-AC/Scope
----------------------------
-
-——————————————
-Keys/Strings/translations
-----------------------------
-
-||Key||EN||NL||FR||DA||
-||||||
-
-
-----------------------------
-Test Plan
-----------------------------
-Tested on: Device, OS version, app version
-Server: Test/Prod
-Languages: EN, DK, FR, NL
-Logged in: Yes/No
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen
-Test cases
-Screen:"
-[DEV_IOS][Dependency on Rudie] Change Nitrate (soil Nmin) to Soil Nmin and Nitrate (water) to Nitrate;Story;Medium;"Update the wording of how we describe nitrate parameters. 
-
-This is based on feedback from users (farmers specifically), that soil nmin is seen as something separate from Nitrate. 
-
-Therefore 'Nitrate' will become two separate parameters; Nitrate (Soil Nmin) isn't actually measuring Nitrate in Soil. It is it's own thing so should actually just be called 'Soil Nmin'. This would then mean Nitrate (water) is just 'Nitrate'. 
-
-See checklist for the screens affected"
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-[DEV_IOS] Local measurements are not updated after a group is deleted by an admin in another device;Bug;Low;"*Tested on:* iOS 17.2.1; Model: Iphone SE; app version 5.2 (269) 
-*Server:* Test 
-*Logged in:* Yes & No 
-
-*Rep. steps.* 
-* Create a group at a device making yourself the owner 
-* Add another user to that group 
-* Using that other user and at a different device add a measurement to that group  
-* Using the original device and account, delete that group. 
-* *The member of the group with the measurement can still see the local measurement as part of the group that was deleted until the local measurements list gets updated* 
-
-*Expected* 
-* Create a group at a device making yourself the owner 
-* Add another user to that group 
-* Using that other user and at a different device add a measurement to that group  
-* Using the original device and account, delete that group. 
-* *The member of the group with the measurement should immediately see that the local measurement is now private*"
-[DEV_IOS] Change 'submit' text in soil Nmin instructions (all languages);Bug;Low;"*iPhone SE (2022), version 192* 
-
-*Current (FRENCH)* 
-
-Step 11 of soil Nmin instructions says 'sur ""submit"" pour le...', however the button on measurement details page shows ""Soumettre"" 
-
-*Desired (FRENCH)* 
-
-Text in instructions should say 'sur ""soumettre"" pour le...' 
+*Rules:* 
+* When the user opens the tutorial either by clicking on the {color:#de350b}*big blue + button, OR the help screen on the camera page{color}*, the tab is set to the last stored parameter (depending on which page the user visited last, this can be the home, map or webshop page) 
+* The above should hold regardless whether the user is logged in or out (or changing logins in the meantime). 
 
   
 
-*Current (DANISH)* 
+Figma link that describes the intended behaviour:  
 
-Step 11 of soil Nmin instructions says 'tryk pa ""submit"" for at...', however the button on measurement details page shows ""Indsend"" 
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
 
-*Desired (DANISH)* 
+  
 
-Text in instructions should say 'sur ""indsend"" pour le...' 
+*--------------------------------------------------------------------------------------* 
+
+{color:#0747a6}*TEST PLAN*{color} 
+
+*--------------------------------------------------------------------------------------* 
+
+*Test cases* 
+# Open the tutorial by clicking on the {color:#de350b}big blue + button from home, map or webshop page, the tab is set to the last stored parameter (depending on which page the user visited last, {color} 
+
+# Open the tutorial by clicking on the t{color:#de350b}he help screen on the camera page{color}*, {color:#de350b}from home, map or webshop page, the tab is set to the last stored parameter (depending on which page the user visited last{color} 
+# The above should hold regardless whether the user is logged in or out (or changing logins in the meantime)"
+ Intelligent flow - Manual measurements;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+
+{*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the manual measurement screen accordingly.  
+
+Parameters can be: Nitrate, Salinity, Ammonium or Phosphate 
+
+*Rules:* 
+* When the user opens the manual measurement screen, the tab is set to the last stored parameter (depending on which page the user visited last).  
+* This applies for the following pages: 
+** *home screen* 
+** *map* 
+** *tutorial* 
+** *manual measurement* 
+* When the user reopens the app after closing it and the manual measurement is still open, the tab is set to the same parameter as before closing the app. 
+* All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime). 
+
+  
+
+Figma link that describes the intended behaviour:  
+
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
+
+  
+
+*--------------------------------------------------------------------------------------* 
+
+{color:#0747a6}*TEST PLAN*{color} 
+
+*--------------------------------------------------------------------------------------* 
+
+*Test cases* 
+# Test scenarios 1-2 (incl. the note) below the ""Manual input 2.0"" screen in Figma [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
+# When the user reopens the app after closing it and the manual measurement is still open, the tab is set to the same parameter as before closing the app. 
+# All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime)."
+ Intelligent flow - Home screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+
+{*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the Home Screen accordingly.  
+
+Parameters can be: Nitrate, Salinity, Ammonium or Phosphate 
+
+*Rules:* 
+* When the user opens the Home Screen for the first time, the tab is by default set to nitrate.  
+* When the user opens the Home Screen from another screen, the tab is set to the last stored parameter (depending on which page the user visited last). This applies for the following pages: 
+** *home screen* 
+** *map* 
+** *tutorial* 
+** *manual measurement* 
+* When the user reopens the app after closing it and lands on the Home Screen, the tab is set to the last stored parameter before closing the app. 
+* All of the above should remain regardless whether the user is logged in or logged out (or changing logins in the meantime)  
+
+  
+
+Figma link that describes the intended behaviour:  
+
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
+
+*--------------------------------------------------------------------------------------* 
+
+{color:#0747a6}*TEST PLAN*{color} 
+
+*--------------------------------------------------------------------------------------* 
+
+*Test cases* 
+# When the user opens the Home Screen for the first time, the tab is by default set to nitrate.  
+# Test scenarios 1-4 below the ""Home 2.2"" screen in Figma [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
+# When the user reopens the app after closing it and lands on the Home Screen, the tab is set to the last stored parameter before closing the app. 
+# All of the above should remain regardless whether the user is logged in or logged out (or changing logins in the meantime) "
+ Read & Write the parameter for intelligent flow;Story;Medium;"*Description:* 
+In order to make the flow more intuitive and switch tabs based on the last used parameter, the app needs to store the parameter that was used most recently. 
+
+Basic functionality for this feature includes reading and writing the parameter. 
+
+1. Read the parameter (what is the current parameter) 
+* Every time the user is on a screen with a tab or filter the selected parameter is read: nitrate, salinity, ammonium or phosphate. This applies for the following pages: 
+** *home screen* 
+** *map* 
+** *tutorial* 
+** *manual measurement* 
+
+2. Write the parameter (changing the parameter) 
+* Every time the user manually changes a tab or filter (on one of the applicable pages), the new parameter is stored in memory and it overwrites the previous stored parameter. This applies for the following pages: 
+** *home screen* 
+** *map* 
+** *tutorial* 
+** *manual measurement* 
+
+3. Standard behaviour 
+* If the user opens the app for the first time, the default is nitrate 
+* If the user closes the app, the last selected parameter is stored, so it can be used when reopening the app 
+* All of the above should remain regardless whether the user is logged in or logged out (or changing logins in the meantime)  
+
+  
+
+Figma link that describes the intended behaviour:  
+
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design] "
+ Intelligent flow - Map screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+
+{*}Description{*}: Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the filter on the map screen accordingly.  
+
+Parameters can be: Nitrate, Salinity, Ammonium or Phosphate 
+
+*Rules:* 
+* When the user opens the map from another screen, the parameter filter is set to the last stored parameter (depending on which page the user visited last).  
+* This applies for the following pages: 
+** *home screen* 
+** *map* 
+** *tutorial* 
+** *manual measurement* 
+* When the user reopens the app after closing it and the map screen is still open, the tab is set to the same parameter as before closing the app. 
+* All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime). 
+
+Figma link that describes the intended behaviour:  
+
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
+
+  
+
+*--------------------------------------------------------------------------------------* 
+
+{color:#0747a6}*TEST PLAN*{color} 
+
+*--------------------------------------------------------------------------------------* 
+
+*Test cases* 
+# Set the parameter to Nitrate/Salinity/Phosphate/Ammonium and the following scenarios should apply (test 1->4, 2>4, 3>4 and 4>1, 4>2, 4->3 ): 
+## switch tabs at the home screen 
+## switch tabs at the tutorial 
+## switch tab during manual measurement 
+## change filter at the map 
+# When the user reopens the app after closing it and the map screen is still open, the tab is set to the same parameter as before closing the app. 
+# All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime)."
+ Investigate app secrets security;Spike;Medium;"This spike is timeboxed to 4 hours. 
+
+We should investigate the following: 
+* Move Gradle file secrets (cognito and signature) to GitHub secrets or is there a better alternative? 
+* Is the GoogleService json file (Firebase) safe enough? 
+* Remove unused secrets (SEGES test and prod) - no need to investigate anything, just add to the followup story 
+* Create new fastlane build scripts - no need to investigate anything, just add to the followup story 
+ "
+ Update map filter;Story;Medium;"We will be updating the filter feature on the map screen so that all filter options are on 1 screen. 
+
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9081%3A113669&mode=dev&t=piOAXsrqd5BvhfI9-1] 
 
  "
-[DEV_IOS] Update button design;Story;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12188); server: test 
+ Updated map date picker;Story;Medium;"The date picker will be updated to allow users to more simply select the correct date range where they want to see their measurements on the map. 
 
-Several buttons are missing a border:  
-# Measurement details after creating a measurement - *Cancel button* (screenshot 1) {color:#ff8b00}Charlie to add figma {color} 
-# Clicking cancel on measurement details screen after creating a measurement  - *Notification has iOS design rather than Aquality*  (screenshot 2) ** {color:#ff8b00}Charlie to add figma {color}"
-[DEV_iOS] MAP - Refactor MapViewFilterViewController;Story;Low;"----------------------
-Description:
-----------------------
-A short description of what the story is and what is new etc...
+This will include removing the arrow from the current filter, removing the slider and adding a calendar for Week, Month and Year. 
 
-What screens are impacted: * 
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9152%3A4103&mode=dev&t=R02ut8Cldl5BH5Pj-1] 
 
----------------------------
-AC/Scope
----------------------------
+ "
+ Edit username update;Story;Medium;"---------------------- 
+Description: 
+---------------------- 
+To deter users from changing their username multiple times, we are moving this feature to the menu, along with log out and delete account. 
 
-——————————————
-Keys/Strings/translations
-----------------------------
+What screens are impacted:  
+* Profile page: https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=13209%3A69870&mode=dev&t=7bmWIGwJjp9Clsmu-1 
 
-||Key||EN||NL||FR||DA||
-||||||
+--------------------------- 
+AC/Scope 
+--------------------------- 
 
+—————————————— 
+Keys/Strings/translations 
+---------------------------- 
+||Key||EN||NL||FR||DA|| 
+| |Edit username|Gebruikersnaam bewerken|Modifier le nom d'utilisateur|Rediger brugernavn| 
 
-----------------------------
-Test Plan
-----------------------------
-Tested on: Device, OS version, app version
-Server: Test/Prod
-Languages: EN, DK, FR, NL
-Logged in: Yes/No
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen
-Test cases
+---------------------------- 
+Test Plan 
+---------------------------- 
+Tested on: Device, OS version, app version 
+Server: Test/Prod 
+Languages: EN, DK, FR, NL 
+Logged in: Yes/No 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Test cases 
 Screen:"
-[DEV_iOS] MAP - MapViewController to Swift;Story;Low;"We like to refactor the MapViewController to a Swift version. 
+ Update target SDK;Story;Medium;"Target the latest Android API 
 
-*AC:* 
-* Restructure the Map folder 
-* Create a date picker component 
-* Show a map with measurements as annotation with different colors 
-* Show current user location 
-* Make sure the map can show different map types 
-* Make sure the filter works 
-* Make sure move to current location works 
-* Make sure the map is showing according to the user settings 
-* Show no internet connection popup 
+Make sure nothing breaks"
+ Group remains as default when user leaves/is deleted from the group;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.2.0 (13080) 
 
-*Out of scope:* 
-* New design 
-* Custom Annotation (other story) 
-* Filter view (other story)"
-[DEV_iOS] MAP - CustomAnnotation to Swift;Story;Low;"The custom annotation is respsobile for how the measurement is displayed on the map.  
+Group remains as default when user leaves/is deleted from the group both in Settings and on Measurement details (during create).  
 
-The custom annotation should show in a different color per measurement type and measurement value. 
+_2 scenarios (can be split to sub-tasks)_ 
 
-In this story we like to refactor the following components: 
-* 
-** CustomAnnotation.h/.m to Swift 
-** CustomAnnotationView.h/.m to Swift 
-** CustomMKPointAnnotatoin.h/.m Swift 
-**  "
-[DEV_IOS] User stuck with loading icon when editing right after turning on internet;Bug;Lowest;"Right after turning on internet it is possible to edit a measurement. If the user edits within 30 seconds of turning on the internet, the user gets stuck with a loading icon. It should not be possible to edit a measurement within the first 30 seconds of turning internet on.  
-
-*Reproduction steps:*  
-# Turn off internet 
-# Open app 
-# Tap on a submitted measurement on home screen 
-# Turn on internet 
++*1. Group remain in settings*+  
 
 *Current* 
-* User is able to tap on edit on measurement details screen within 30 seconds from turning on internet 
-* Able to edit a field  
-* Tap on submit 
-* A loading icon appears and doesn't disappear  
+* Choose Group A as default Privacy and Sharing in Settings 
+* User leaves / gets deleted from Group A 
+* *Group A is shown under Privacy and Sharing in settings* 
 
 *Expected* 
-* User should not be able to tap on edit on measurement details screen within 30 seconds from turning on internet  
+* *Private* {*}is shown under Privacy and Sharing in settings{*}{*}{{*}} 
+
++*2. Group remains in Measurement details*+  
+
+*Current* 
+* Choose Group A as default Privacy and Sharing in Settings 
+* User leaves / gets deleted from Group A 
+* Create a measurement 
+* *1: Group A is shown under Privacy and Sharing on Measurement details* 
+* Submit measurement 
+* {*}2: Message Measurement is successfully submitted is shown beneath another message ""Failed to add measurement to group"" - these are shown too quickly{*}{*}{{*}} 
+* Private is shown under Privacy and Sharing on Measurement details (correct) 
+
+*Expected* 
+* {*}1: Private is shown under Privacy and Sharing on Measurement details{*}{*}{{*}} 
+* *2: Only the* *""Failed to add measurement to group"" message is shown and it is shown for a bit longer so user has time to read* 
 
  "
+ Tapping on a submitted Salinity measurement on home screen shows no internet error;Bug;Medium;"Tapping on some submitted Salinity measurement on home screen shows no internet error.  
+
+*Current* 
+* Tap on a specific area of the field of a salinity measurement on the home screen 
+* *The no internet error pop-up is shown (see screenrec)* 
+
+*Expected* 
+* *The measurement details is shown* 
+
+ "
+ Update / add (alt) text throughout the app;Story;Medium;"Provide alternative text for meaningful images, logos, icons as well as all buttons need to be voiced over. 
+* Via your measurements : 
+** in ""your measurements"" scre{color:#172b4d}ens : describe arrow button on the measurements to see details ""button for more details"" {color} 
+** {color:#172b4d}in the ""measurement details"" +edit+ screens : describe arrow button for sample type and soil type ""button to open [soil type/sample type] options"" {color} 
+** {color:#172b4d}in ""measurement details"" screens :{color} 
+*** {color:#172b4d}describe the text and data in the blue field with the following strructure ""Your [Nitrate/Salinity] measurement is [X.X] mg/L or [X.X] mS/cm""{color} 
+*** {color:#172b4d}describe the localization buttons in the map as ""button to change location"" and ""button to show current location/measurement location"".{color} 
+
+* Via map : 
+** In the upper time table : 
+*** Describe the arrows for previous and next week ""button previous week"" ""button next week""  
+*** Describe the arrow to open and close more options {color:#ffab00}""button to open the date picker"" {color} 
+*** Describe the slidebar {color:#ffab00}""slider"" {color} 
+** In the filter icons below : 
+*** When opening the filters : the arrow icons {color:#ffab00}""button to open options"" {color} 
+
+* Via profile: 
+** Describe the profile picture (this will be changed to the logo right ?) as {color:#ffab00}-""This is the profile picture""-  ""This is the logo of the Deltares Aquality App""{color} 
+
+* Via settings : 
+** Describe the arrow icons in settings, to open section {color:#ffab00}""button to open options""{color} 
+** Describe the switch button for 'save picture on device' as ""Switch on""/""Switch off"" 
+** In FAQ : describe the arrow icons in settings  {color:#ffab00}""Expand button"" and to close the section{color} {color:#ffab00}""Collapse button""{color} 
+** In onboarding screens : describe swipe functio{color:#172b4d}n ""Swipe left to see the next screen"", describe ""Explore what's new"", ""skip"" and ""get started"" buttons. And all other text in following screens (currently only the ""welcome in the new app"" is voiced over).{color} 
+** For attachments 6., 7., 8., 9. & 10. : the title + a closing button needs to be implemented {color:#ffab00}(Design needed from designers){color} 
+
+* Via new measurements : 
+** in the instructions screen: 
+*** Describe hyperlinks as {color:#ffab00}""link""{color} 
+*** Bulletpoints : the text after bulletpoints isn't voiced over in a proper order: First the bulletpoints are mentioned then the text below the bulletpoints and afterwards comes the text after the bulletpoints. This is incorrect. Text of bulletpoints should be mentioned throughout the bulletpoints. 
+** in the camera screen 
+*** Add an end signal to the 60s timer of the camera screen 
+
+* Titles in general do not offer enough explanation for a disabled user : 
+** ""Salinity"" to  ""Salinity measurements"" 
+** ""Nitrate"" to  ""Nitrate measurements"" 
+** ""Taking a measurement"" to {color:#ffab00}-""Instructions for taking a measurement""- ""How to take a measurement""{color} 
+** ""Measurement"" to {color:#ffab00}-""Take a picture of your measurement""- ""Camera measurements""{color} 
+** ""Measurement details"" to {color:#ffab00}""Edit measurement {-}details{-}""{color} 
+
+  
+
+ "
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+ Soil Nmin - new measurement;Story;Medium;"Update the interface and flow of a user taking a Soil Nmin measurement 
+
+Taking a measurement and setting Soil Nmin: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10115-12338&mode=design&t=FkhUMO4d1voljAYG-4]  
+
+ "
+ Soil Nmin - view/edit measurement;Story;Medium;"Update Viewing Soil Nmin measurement from home/map: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=6311%3A39568&t=tKvb0PCjpew1m7N8-1] 
+
+  
+
+ "
+ Add info screen to NO3/NO3-N switch on manual input screen;Story;Medium;"Description: 
+
+On the manual input screen, the user has the option to switch between NO3 and NO3-N for nitrate, but there is no explanation on what it means for users who are not familiar with the difference. Therefore, we should add the info screen that we also use in the settings to explain the difference between NO3 and NO3-N. (See attached photos) 
+* add the (i) icon to the pop-up where you select between NO3 and NO3-N 
+* add the info screen that we also use in the settings 
+
+  
+
+See Figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7245-39840&mode=design&t=v4Bcb4Yqhiel7OOx-4] "
+" The ""Tap here to add a description"" text is missing in edit mode";Bug;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12172); server: test 
+
+When editing a measurement that doesn't have a description there should be a text ""Tap here to add a description"" in the field. This text is missing.  
+
+*Current* 
+* open app 
+* tap on a measurement on home screen (that doesn't have a description) 
+* tap on edit 
+* *The ""Tap here to add a description"" text is missing in the description field* 
+
+*Expected* 
+* open app 
+* tap on a measurement on home screen (that doesn't have a description) 
+* tap on edit 
+* *The ""Tap here to add a description"" text is displayed in the description field* 
+
+*Figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7888-13009&mode=design&t=kee8vp3uwjrr7iiF-0]* "
+ Refactor permission logic code for more readability within MainActivity.java;Story;Low;"""Things that pop right away: 
+* function is huge (almost 100 lines) 
+* the outer switch only has 1 case... so it could be an if statement... 
+* there are too many nested condition statements making it quite difficult to read... 
+
+My suggestion would be to extract parts of if to new smaller functions with meaningful names and reuse where needed. Making it simples, smaller and easier to understand."""
+Keyboard input doesn't work when input field is out of focus;Bug;Low;"Tested on Samsung Galaxy S6, Android 7 
+
+*Current behaviour* 
+
+When selecting the description field of a measurement, the keyboard doesn't work when the field is not visible in the screen. 
+
+In some cases, this can be a positive as you can't make mistakes typing blindly. In other cases, you are still not able to edit even after you can see the field, in which case you need to select another field first and then coming back to it. See the 2 attached videos."
+ Update button design;Story;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12188); server: test 
+
+Several buttons are missing a border:  
+# Clicking delete on a measurement in edit mode - *Cancel button* (screenshot 1) [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=5523-34775&mode=design&t=UfCDL9Qeti4bQCe9-0]  
+# Edit at least one field of measurement, click on X - *Cancel button* (screenshot 2:  [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=5523-34805&mode=design&t=4YsYgjQfVRpiJDIS-0]  
+# Measurement details after creating a measurement - *Cancel button* (screenshot 3) (can't find in Figma) {color:#ff8b00} [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=4743%3A31553&mode=design&t=cVU43Q4kLAFEaNyY-1]{color} 
+# Clicking cancel on measurement details screen after creating a measurement - *No button* (screenshot 4). (can't find in Figma) {color:#ff8b00}*Should be the same as the other 3 examples*{color} 
+# Cancel button on Tutorial accessed through + button. - *Cancel button* (screenshot 5) figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7163-39842&mode=design&t=vJcc5yHJGR6SN4Ri-0] "
+Add fade out to pages where users have to scroll;Story;Low;The disclaimer screen should have a fade in/out on the disclaimer screen (like in iOS) to make users aware that they can scroll
+ Remove decimal on kg N/ha value on edit location screen;Bug;Lowest;"*Found on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12170); server: test  
+
+There is a decimal displayed on the kg N/ha value on the edit location screen when creating/editing a soil Nmin measurement. There should not be a decimal here.  
+
+  
+
+*PROPOSED SOLUTION:* 
+
+- REMOVE BLUE BAR FROM CHANGE LOCATION SCREEN 
+
+  
+
+*Reproduction steps:* 
+* Open app 
+* Create/edit a Nitrate Soil Nmin measurement 
+* Tap the edit location button 
+
+*Current* 
+* The kg N/ha value is displayed *with* a decimal 
+
+*Expected* 
+* The kg N/ha value is displayed *without* a decimal 
+
+*Figma:* [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8604-14113&mode=design&t=3OZ96bCSf28dBoF9-0]) 
+
+*--------------------------------------------------------------------------------------* 
+
+{color:#403294}*TEST PLAN*{color} 
+
+*--------------------------------------------------------------------------------------* 
+
+*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (121XX); server: test 
+
+Test each case: 
+* Logged out and visibility Public Nitrate (Soil) 
+* Logged in with username and visibility Personal on Nitrate (Soil) 
+
+*Test cases* 
+
+1. Create a measurement 
+* Open app 
+* Tap on + and create a Soil NMin measurement 
+* Tap the edit location button on the measurment details screen 
+* The kg N/ha value is displayed *without* a decimal(figma; [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8604-14113&mode=design&t=3OZ96bCSf28dBoF9-0]) 
+
+1. Edit a measurement 
+* Open app 
+* Tap on a Soil Nmin measurement on the home screen 
+* Tap on edit 
+* Tap the edit location button on the edit screen 
+* The kg N/ha value is displayed *without* a decimal (figma; [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8604-14113&mode=design&t=3OZ96bCSf28dBoF9-0])"
+ As a user I want all the webshop form data to be retained when navigating between screens;Story;Lowest;Currently only the personal details are retained, and only while inside the order equipment activity. 
 ;;;
