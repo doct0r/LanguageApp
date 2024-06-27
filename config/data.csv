@@ -1,11 +1,11 @@
 ﻿Repository;Title;Labels;Priority;Project
-doct0r/LanguageApp; Remove auto log in when logging in with Google account;Story;High;Current behaviour: 
+doct0r/LanguageApp; Remove auto log in when logging in with Google account;Story;High;"Current behaviour: 
 
 When you have previously logged in with Google and logged out again: the second time and all times after that when you log in with google you get automatically logged in without having to input username or password. So in the case that someone changes their google details they can't change account. Even after having reinstalled the app multiple times and deleted all app data you still log in automatically when pressing google log in.  
 
 Desired behaviour: 
 
-Allow users to log in again manually (entering mail and password) after having previously logged in with Google and logged out.
+Allow users to log in again manually (entering mail and password) after having previously logged in with Google and logged out."
 doct0r/LanguageApp; Previous sample & soil type not remembered when editing with filter active;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 6.0.2 (13137) 
 
 *Current* 
@@ -21,9 +21,9 @@ doct0r/LanguageApp; Move ID share functionality to profile screen;Story;Medium;"
 Description: 
 ---------------------- 
 
-Testing has shown that it would be useful to also show your AqualityID on the Group page in profile, making it easier to share the ID verbally if you create a group. 
+Testing has shown that it would be useful to also show your AqualityID on the Group page in profile making it easier to share the ID verbally if you create a group. 
 
-Because of this, we are allowing the user to share and view their ID from both the profile screen and the groups profile screen. 
+Because of this we are allowing the user to share and view their ID from both the profile screen and the groups profile screen. 
 
 What screens are impacted: * 
 * Profile page: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/branch/Y8yzfhWUTMP95wpllUHNr9/Final-Design?type=design&node-id=13221%3A71225&mode=dev&t=dZdB5jfsnJy5Sj2V-1] 
@@ -38,24 +38,24 @@ AC/Scope
 Keys/Strings/translations 
 ---------------------------- 
 ||Key||EN||NL||FR||DA|| 
-|profile_groups_empty_description|You’re not part of any groups yet. Share your Aquality ID to join a group or create your own group below.|Je maakt nog geen deel uit van een groep. Deel je Aquality ID om lid te worden van een groep of maak je eigen groep hieronder.|Vous ne faites partie d'aucun groupe pour le moment. Partagez votre identifiant Aquality pour rejoindre un groupe ou créez votre propre groupe ci-dessous.|Du er ikke en del af nogen grupper endnu. Del dit Aquality-ID for at blive medlem af en gruppe, eller opret din egen gruppe nedenfor.| 
+|profile_groups_empty_description|You’re not part of any groups yet. Share your Aquality ID to join a group or create your own group below.|Je maakt nog geen deel uit van een groep. Deel je Aquality ID om lid te worden van een groep of maak je eigen groep hieronder.|Vous ne faites partie d'aucun groupe pour le moment. Partagez votre identifiant Aquality pour rejoindre un groupe ou créez votre propre groupe ci-dessous.|Du er ikke en del af nogen grupper endnu. Del dit Aquality-ID for at blive medlem af en gruppe eller opret din egen gruppe nedenfor.| 
 
   
 
 ---------------------------- 
 Test Plan 
 ---------------------------- 
-Tested on: Device, OS version, app version 
+Tested on: Device OS version app version 
 Server: Test/Prod 
-Languages: EN, DK, FR, NL 
+Languages: EN DK FR NL 
 Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page Have submitted measurements on home screen 
 Test cases 
 Screen:"
 doct0r/LanguageApp; Update FAQs for deleting and downloading measurements;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
-New text for FAQs to be updated to let the user know how they can delete and download their measurements, and group measurements for admins. 
+New text for FAQs to be updated to let the user know how they can delete and download their measurements and group measurements for admins. 
 
 3 questions in total: How can I download my measurements?  
 Can I download group or organisation measurements?  
@@ -66,7 +66,7 @@ The text can be found on Figma: https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR
 What screens are impacted: * 
 FAQs 
 
-NOTE - updates to the Deltares dashboard (https://nitrate-app.deltares.nl/) are needed for the groups download to be functional. This work needs to be done before including the question, Can I download group or organisation measurements?  
+NOTE - updates to the Deltares dashboard (https://nitrate-app.deltares.nl/) are needed for the groups download to be functional. This work needs to be done before including the question Can I download group or organisation measurements?  
 
 --------------------------- 
 AC/Scope 
@@ -83,11 +83,11 @@ Keys/Strings/translations
 ---------------------------- 
 Test Plan 
 ---------------------------- 
-Tested on: Device, OS version, app version 
+Tested on: Device OS version app version 
 Server: Test/Prod 
-Languages: EN, DK, FR, NL 
+Languages: EN DK FR NL 
 Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page Have submitted measurements on home screen 
 Test cases 
 Screen:"
 doct0r/LanguageApp; Selecting a soil nmin weight on devices with very small screens is difficult or even impossible;Bug;Medium;"*Repro:* 
@@ -98,9 +98,9 @@ Go to Weight
 
 *Behaviour:* 
 
-In the screenshots it can be observed that the weight input is not visible and sometimes not even the Done button, making it impossible to add weight if the screen size is too small. (Emulated 3.7"" 480 x 800hdpi Nexus one and 4.65"" 720p Galaxy Nexus) 
+In the screenshots it can be observed that the weight input is not visible and sometimes not even the Done button making it impossible to add weight if the screen size is too small. (Emulated 3.7"" 480 x 800hdpi Nexus one and 4.65"" 720p Galaxy Nexus) 
 
-!Screenshot 2024-06-14 at 14.54.18.png|width=194,height=289!!image-2024-06-14-14-55-23-201.png|width=194,height=251! 
+!Screenshot 2024-06-14 at 14.54.18.png|width=194height=289!!image-2024-06-14-14-55-23-201.png|width=194height=251! 
 
   
 
@@ -111,19 +111,19 @@ doct0r/LanguageApp; Update flow of group settings;Story;Medium;"----------------
 Description: 
 ---------------------- 
 
-When managing group members after you've created the group previously, it takes MANY taps to go back to the home/profile/map screen where you're able to take a measurement.  
+When managing group members after you've created the group previously it takes MANY taps to go back to the home/profile/map screen where you're able to take a measurement.  
 
-When editing various group details, we will change the flow when you press 'Done'.  
+When editing various group details we will change the flow when you press 'Done'.  
 
 *What screens are impacted:*  
 * Edit group name/description: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5261&mode=dev&t=FtfFYIUZfT2wu3Mp-1] 
 
-** _Current:_ when the user presses 'done', they are directed back to the group settings page. 
+** _Current:_ when the user presses 'done' they are directed back to the group settings page. 
 ** _*NEW:*_ when the user presses 'done' they should be directed back to group profile page ([https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5215&mode=dev&t=FtfFYIUZfT2wu3Mp-1]) 
 * Manage members page: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5248&mode=dev&t=FtfFYIUZfT2wu3Mp-1] 
 
 ** {_}Current{_}: the user has to press the back button twice to go back to the group profile page (once to settings and once to group profile) 
-** _*NEW:*_ We are adding a new 'Done' button in the top right corner. When this is pressed, the user should be taken directly back to the group profile page ([https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5215&mode=dev&t=FtfFYIUZfT2wu3Mp-1]) 
+** _*NEW:*_ We are adding a new 'Done' button in the top right corner. When this is pressed the user should be taken directly back to the group profile page ([https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5215&mode=dev&t=FtfFYIUZfT2wu3Mp-1]) 
 
 --------------------------- 
 AC/Scope 
@@ -137,14 +137,14 @@ Keys/Strings/translations
 ---------------------------- 
 Test Plan 
 ---------------------------- 
-Tested on: Device, OS version, app version 
+Tested on: Device OS version app version 
 Server: Test/Prod 
-Languages: EN, DK, FR, NL 
+Languages: EN DK FR NL 
 Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page Have submitted measurements on home screen 
 Test cases 
 Screen:"
-doct0r/LanguageApp; User doesn't arrive at home screen after submitting a measurement (only after NL results);Bug;Medium;"User should always arrive at home screen after submitting a measurement - even though user tapped plus from any other screen (map, settings, profile).  
+doct0r/LanguageApp; User doesn't arrive at home screen after submitting a measurement (only after NL results);Bug;Medium;"User should always arrive at home screen after submitting a measurement - even though user tapped plus from any other screen (map settings profile).  
 
 *Current* 
 * Tap on plus from any other screen than home 
@@ -178,26 +178,26 @@ doct0r/LanguageApp; Editing with filter active doesn't apply changes until filte
 * *+edit is+ applied on home screen (if value was edited)* 
 * tap on the measurement again 
 * *+new+ details are shown*"
-doct0r/LanguageApp; When killing app and reopening it, remember filters;Story;Medium;"At the moment, when the app is killed and reopened, the filter a logged in user had applied will be lost and needs to be reapplied. 
+doct0r/LanguageApp; When killing app and reopening it remember filters;Story;Medium;"At the moment when the app is killed and reopened the filter a logged in user had applied will be lost and needs to be reapplied. 
 
 We'd like to keep the filter on for users who will only be filtering on their group measurements"
 doct0r/LanguageApp; NH4-N vs NH4;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 
-As users might register Ammonium in NH4 or NH4-N, the app should support both (in a similar way as NO3 and NO3-N is handled). 
+As users might register Ammonium in NH4 or NH4-N the app should support both (in a similar way as NO3 and NO3-N is handled). 
 The database however should always store the NH4-N value. ({color:#ff8b00}NH4 = NH4-N * 1.28786{color}) 
 
 --------------------------- 
 AC/Scope 
 --------------------------- 
-# On the Manual Input screen, the user should be able to enter values as NH4 (They will be calculated into NH4-N before submitting to the database) 
-# On the Manual Input screen, the user should be able to enter values as NH4-N 
-# On the Manual input screen, the user should be able to toggle between NH4 and NH4-N (the text should toggle in a similar way) 
-# On the Settings screen, the user can select a default unit for Ammonium 
-# On the Measurement detail screens, the unit in the blue bar will be displayed as default unit (big) and not selected unit (small), just like Nitrate 
-# On the Measurement Overview (Home) screen, the measurement type selector shows the unit (selected in Settings): (Ammonium (NH4-N) or Ammonium (NH4)) 
-# On the Measurement Overview (Home) screen, in case NH4 has been selected the values from the database have to be calculated from NH4-N to NH4 before showing 
+# On the Manual Input screen the user should be able to enter values as NH4 (They will be calculated into NH4-N before submitting to the database) 
+# On the Manual Input screen the user should be able to enter values as NH4-N 
+# On the Manual input screen the user should be able to toggle between NH4 and NH4-N (the text should toggle in a similar way) 
+# On the Settings screen the user can select a default unit for Ammonium 
+# On the Measurement detail screens the unit in the blue bar will be displayed as default unit (big) and not selected unit (small) just like Nitrate 
+# On the Measurement Overview (Home) screen the measurement type selector shows the unit (selected in Settings): (Ammonium (NH4-N) or Ammonium (NH4)) 
+# On the Measurement Overview (Home) screen in case NH4 has been selected the values from the database have to be calculated from NH4-N to NH4 before showing 
 # On the Measurement Overview Help screen all values are displayed as NH4-N (already implemented) 
 # There are always 2 decimals input and displayed. 
 
@@ -211,11 +211,11 @@ Keys/Strings/translations
 ---------------------------- 
 Test Plan 
 ---------------------------- 
-Tested on: Device, OS version, app version 
+Tested on: Device OS version app version 
 Server: Test/Prod 
-Languages: EN, DK, FR, NL 
+Languages: EN DK FR NL 
 Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page Have submitted measurements on home screen 
 Test cases 
 Screen:"
 doct0r/LanguageApp; Disabling the GPS spams the user with pop ups about improving the experience by turning on location;Bug;Medium;"*Repro:* 
@@ -224,14 +224,14 @@ Disable the GPS location from the Android device settings
 
 *Actual:* 
 
-Going through the app will keep triggering the ""For a better experience, turn on device location, which uses Google's location service"" popup (see screenshot) over and over again. (On the map screen, after taking a measurement, on login/logout etc) 
+Going through the app will keep triggering the ""For a better experience turn on device location which uses Google's location service"" popup (see screenshot) over and over again. (On the map screen after taking a measurement on login/logout etc) 
 
 
 
 *Expected:* 
 
-Tapping *No, thanks* once should be enough to not see it until the app is killed and reopened"
-doct0r/LanguageApp; webshop image overlaps with text;Bug;Medium;In the webshop, when selecting Salinity -> Stickers -> Print manually , the image of the salinity meter overlaps with the text (see screenshot)
+Tapping *No thanks* once should be enough to not see it until the app is killed and reopened"
+doct0r/LanguageApp; webshop image overlaps with text;Bug;Medium;In the webshop when selecting Salinity -> Stickers -> Print manually  the image of the salinity meter overlaps with the text (see screenshot)
 doct0r/LanguageApp; Link to Hach strips has an icon at the end of it that takes you to the app webshop when clicked;Bug;Medium;In the tutorial there is a link to the Hach test strips that should take you to the Hach website. At the end of that link there is an icon (hyperlink) that is actually a different link that points to the webshop within the app. This should all be one link to the Hach website.
 doct0r/LanguageApp; Image colors are calculated on DB values and not rounded values;Bug;Medium;"Some scenarios will cause the frontend to display two different colors for the same value. 
   
@@ -243,7 +243,7 @@ Below is a example
   
 3) Then go to home 
   
-4) You will have 2 measurements of the same value, but different colours"
+4) You will have 2 measurements of the same value but different colours"
 doct0r/LanguageApp; Soil nmin sample type not populating after being on the salinity tab;Bug;Medium;"*Repro:* 
 # Set your default sample type to Soil Nmin 
 # Start a new measurement 
@@ -255,8 +255,8 @@ doct0r/LanguageApp; Soil nmin sample type not populating after being on the sali
 # Enter a value (e.g. 2) 
 # Tap on Done *Expected:* Soil Nmin should be selected {*}Actual{*}: Select sample type is seen instead 
 # Tap on the Sample Type 
-# Select Soil Nmin *Expected:* Soil Nmin should be dark blue and font franca_medium *Actual:* The font is light blue, italic (see attachment) "
-doct0r/LanguageApp;Sometimes the soil layers don't load on time;Bug;Medium;Not clear how to reproduce, but sometimes the background service that loads the Dutch ground layers doesn't load on time and the Continue button that leads to the Results screen does not appear
+# Select Soil Nmin *Expected:* Soil Nmin should be dark blue and font franca_medium *Actual:* The font is light blue italic (see attachment) "
+doct0r/LanguageApp;Sometimes the soil layers don't load on time;Bug;Medium;Not clear how to reproduce but sometimes the background service that loads the Dutch ground layers doesn't load on time and the Continue button that leads to the Results screen does not appear
 doct0r/LanguageApp;[Dependency on Rudie] Change Nitrate (soil Nmin) to Soil Nmin and Nitrate (water) to Nitrate;Story;Medium;"Nitrate (Soil Nmin) isn't actually measuring Nitrate in Soil. It is it's own thing so should actually just be called 'Soil Nmin'. 
 
   
@@ -265,7 +265,7 @@ This would then mean Nitrate (water) is just Nitrate."
 doct0r/LanguageApp;;;;
 doct0r/LanguageApp;;;;
 doct0r/LanguageApp;;;;
-doct0r/LanguageApp; Update the list of API error codes and their translations;Feature;Medium;Rudie added more API error codes, we should update our list as well to match it
+doct0r/LanguageApp; Update the list of API error codes and their translations;Feature;Medium;Rudie added more API error codes we should update our list as well to match it
 doct0r/LanguageApp; Refactoring Profile Screen in Kotlin;Story;Medium;"Description
 
 Scenarios
@@ -276,7 +276,7 @@ We distinct between two kinds of features:
 1 - Features that requires an Epic (containing multiple Stories)
 2 - Features that do not require an Epic (containing one Story)
 
-In case a feature requires an Epic, the process starts with the DESIGN_EPIC procedure, all other features will start with the DESIGN_TECH procedure.
+In case a feature requires an Epic the process starts with the DESIGN_EPIC procedure all other features will start with the DESIGN_TECH procedure.
 
 - - - - - - - BEGIN DESIGN_EPIC Procedure - - - - - - - 
 1. Create new Epic
@@ -298,9 +298,9 @@ When all stories have status ""Discovery Ready for Design/Development""
 1. Move this Story from Backlog to ""Discovery In Progress""
 2. Check if all design requirements are clear
 3. Create or update design in Figma
-4. If content is required, create a new content story and assign to Epic
+4. If content is required create a new content story and assign to Epic
 5. Check design against basic Accessibility requirements
-6. If localisation is applicable, create localisation stories and assign to Epic. 
+6. If localisation is applicable create localisation stories and assign to Epic. 
 7. Move this story to ""Discovery Ready for Review""
 8. Review Epic (Rob & Michelle & Melle (± Dimitris))
 9. Sign-off Rob: Story to ""Discovery Ready for Design/Development""
@@ -312,7 +312,7 @@ When all stories have status ""Discovery Ready for Design/Development""
 - Move this Story from Backlog to ""Discovery In Progress""
 - Check if all design requirements are clear
 - Create or update design ??(in Figma)
-- If localisation is applicable, create localisation stories and assign to Epic. 
+- If localisation is applicable create localisation stories and assign to Epic. 
 - Move this story to ""Discovery Ready for Review""
 - Review Epic (Rob & Michelle)
 - Sign-off Rob: Story to ""Discovery Ready for Design/Development""
@@ -330,14 +330,14 @@ When all stories have status ""Discovery Ready for Design/Development""
 - Testing coordinated by Test Manager
 - Sign-off Test Manager: Story to ""Done""
 - - - - - - - END DEVELOPMENT - - - - - - -"
-doct0r/LanguageApp; Intelligent flow - Tutorial;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+doct0r/LanguageApp; Intelligent flow - Tutorial;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story we need the ability to read and write the parameter in the app 
 
 {*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the tutorial screen accordingly.  
 
-Parameters can be: Nitrate, Salinity, Ammonium or Phosphate 
+Parameters can be: Nitrate Salinity Ammonium or Phosphate 
 
 *Rules:* 
-* When the user opens the tutorial either by clicking on the {color:#de350b}*big blue + button, OR the help screen on the camera page{color}*, the tab is set to the last stored parameter (depending on which page the user visited last, this can be the home, map or webshop page) 
+* When the user opens the tutorial either by clicking on the {color:#de350b}*big blue + button OR the help screen on the camera page{color}* the tab is set to the last stored parameter (depending on which page the user visited last this can be the home map or webshop page) 
 * The above should hold regardless whether the user is logged in or out (or changing logins in the meantime). 
 
   
@@ -355,24 +355,24 @@ Figma link that describes the intended behaviour: 
 *--------------------------------------------------------------------------------------* 
 
 *Test cases* 
-# Open the tutorial by clicking on the {color:#de350b}big blue + button from home, map or webshop page, the tab is set to the last stored parameter (depending on which page the user visited last, {color} 
+# Open the tutorial by clicking on the {color:#de350b}big blue + button from home map or webshop page the tab is set to the last stored parameter (depending on which page the user visited last {color} 
 
-# Open the tutorial by clicking on the t{color:#de350b}he help screen on the camera page{color}*, {color:#de350b}from home, map or webshop page, the tab is set to the last stored parameter (depending on which page the user visited last{color} 
+# Open the tutorial by clicking on the t{color:#de350b}he help screen on the camera page{color}* {color:#de350b}from home map or webshop page the tab is set to the last stored parameter (depending on which page the user visited last{color} 
 # The above should hold regardless whether the user is logged in or out (or changing logins in the meantime)"
-doct0r/LanguageApp; Intelligent flow - Manual measurements;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+doct0r/LanguageApp; Intelligent flow - Manual measurements;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story we need the ability to read and write the parameter in the app 
 
 {*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the manual measurement screen accordingly.  
 
-Parameters can be: Nitrate, Salinity, Ammonium or Phosphate 
+Parameters can be: Nitrate Salinity Ammonium or Phosphate 
 
 *Rules:* 
-* When the user opens the manual measurement screen, the tab is set to the last stored parameter (depending on which page the user visited last).  
+* When the user opens the manual measurement screen the tab is set to the last stored parameter (depending on which page the user visited last).  
 * This applies for the following pages: 
 ** *home screen* 
 ** *map* 
 ** *tutorial* 
 ** *manual measurement* 
-* When the user reopens the app after closing it and the manual measurement is still open, the tab is set to the same parameter as before closing the app. 
+* When the user reopens the app after closing it and the manual measurement is still open the tab is set to the same parameter as before closing the app. 
 * All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime). 
 
   
@@ -391,22 +391,22 @@ Figma link that describes the intended behaviour: 
 
 *Test cases* 
 # Test scenarios 1-2 (incl. the note) below the ""Manual input 2.0"" screen in Figma [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
-# When the user reopens the app after closing it and the manual measurement is still open, the tab is set to the same parameter as before closing the app. 
+# When the user reopens the app after closing it and the manual measurement is still open the tab is set to the same parameter as before closing the app. 
 # All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime)."
-doct0r/LanguageApp; Intelligent flow - Home screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+doct0r/LanguageApp; Intelligent flow - Home screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story we need the ability to read and write the parameter in the app 
 
 {*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the Home Screen accordingly.  
 
-Parameters can be: Nitrate, Salinity, Ammonium or Phosphate 
+Parameters can be: Nitrate Salinity Ammonium or Phosphate 
 
 *Rules:* 
-* When the user opens the Home Screen for the first time, the tab is by default set to nitrate.  
-* When the user opens the Home Screen from another screen, the tab is set to the last stored parameter (depending on which page the user visited last). This applies for the following pages: 
+* When the user opens the Home Screen for the first time the tab is by default set to nitrate.  
+* When the user opens the Home Screen from another screen the tab is set to the last stored parameter (depending on which page the user visited last). This applies for the following pages: 
 ** *home screen* 
 ** *map* 
 ** *tutorial* 
 ** *manual measurement* 
-* When the user reopens the app after closing it and lands on the Home Screen, the tab is set to the last stored parameter before closing the app. 
+* When the user reopens the app after closing it and lands on the Home Screen the tab is set to the last stored parameter before closing the app. 
 * All of the above should remain regardless whether the user is logged in or logged out (or changing logins in the meantime)  
 
   
@@ -422,32 +422,32 @@ Figma link that describes the intended behaviour: 
 *--------------------------------------------------------------------------------------* 
 
 *Test cases* 
-# When the user opens the Home Screen for the first time, the tab is by default set to nitrate.  
+# When the user opens the Home Screen for the first time the tab is by default set to nitrate.  
 # Test scenarios 1-4 below the ""Home 2.2"" screen in Figma [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
-# When the user reopens the app after closing it and lands on the Home Screen, the tab is set to the last stored parameter before closing the app. 
+# When the user reopens the app after closing it and lands on the Home Screen the tab is set to the last stored parameter before closing the app. 
 # All of the above should remain regardless whether the user is logged in or logged out (or changing logins in the meantime) "
 doct0r/LanguageApp; Read & Write the parameter for intelligent flow;Story;Medium;"*Description:* 
-In order to make the flow more intuitive and switch tabs based on the last used parameter, the app needs to store the parameter that was used most recently. 
+In order to make the flow more intuitive and switch tabs based on the last used parameter the app needs to store the parameter that was used most recently. 
 
 Basic functionality for this feature includes reading and writing the parameter. 
 
 1. Read the parameter (what is the current parameter) 
-* Every time the user is on a screen with a tab or filter the selected parameter is read: nitrate, salinity, ammonium or phosphate. This applies for the following pages: 
+* Every time the user is on a screen with a tab or filter the selected parameter is read: nitrate salinity ammonium or phosphate. This applies for the following pages: 
 ** *home screen* 
 ** *map* 
 ** *tutorial* 
 ** *manual measurement* 
 
 2. Write the parameter (changing the parameter) 
-* Every time the user manually changes a tab or filter (on one of the applicable pages), the new parameter is stored in memory and it overwrites the previous stored parameter. This applies for the following pages: 
+* Every time the user manually changes a tab or filter (on one of the applicable pages) the new parameter is stored in memory and it overwrites the previous stored parameter. This applies for the following pages: 
 ** *home screen* 
 ** *map* 
 ** *tutorial* 
 ** *manual measurement* 
 
 3. Standard behaviour 
-* If the user opens the app for the first time, the default is nitrate 
-* If the user closes the app, the last selected parameter is stored, so it can be used when reopening the app 
+* If the user opens the app for the first time the default is nitrate 
+* If the user closes the app the last selected parameter is stored so it can be used when reopening the app 
 * All of the above should remain regardless whether the user is logged in or logged out (or changing logins in the meantime)  
 
   
@@ -455,20 +455,20 @@ Basic functionality for this feature includes reading and writing the parameter.
 Figma link that describes the intended behaviour:  
 
 [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design] "
-doct0r/LanguageApp; Intelligent flow - Map screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+doct0r/LanguageApp; Intelligent flow - Map screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story we need the ability to read and write the parameter in the app 
 
 {*}Description{*}: Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the filter on the map screen accordingly.  
 
-Parameters can be: Nitrate, Salinity, Ammonium or Phosphate 
+Parameters can be: Nitrate Salinity Ammonium or Phosphate 
 
 *Rules:* 
-* When the user opens the map from another screen, the parameter filter is set to the last stored parameter (depending on which page the user visited last).  
+* When the user opens the map from another screen the parameter filter is set to the last stored parameter (depending on which page the user visited last).  
 * This applies for the following pages: 
 ** *home screen* 
 ** *map* 
 ** *tutorial* 
 ** *manual measurement* 
-* When the user reopens the app after closing it and the map screen is still open, the tab is set to the same parameter as before closing the app. 
+* When the user reopens the app after closing it and the map screen is still open the tab is set to the same parameter as before closing the app. 
 * All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime). 
 
 Figma link that describes the intended behaviour:  
@@ -484,20 +484,20 @@ Figma link that describes the intended behaviour: 
 *--------------------------------------------------------------------------------------* 
 
 *Test cases* 
-# Set the parameter to Nitrate/Salinity/Phosphate/Ammonium and the following scenarios should apply (test 1->4, 2>4, 3>4 and 4>1, 4>2, 4->3 ): 
+# Set the parameter to Nitrate/Salinity/Phosphate/Ammonium and the following scenarios should apply (test 1->4 2>4 3>4 and 4>1 4>2 4->3 ): 
 ## switch tabs at the home screen 
 ## switch tabs at the tutorial 
 ## switch tab during manual measurement 
 ## change filter at the map 
-# When the user reopens the app after closing it and the map screen is still open, the tab is set to the same parameter as before closing the app. 
+# When the user reopens the app after closing it and the map screen is still open the tab is set to the same parameter as before closing the app. 
 # All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime)."
 doct0r/LanguageApp; Investigate app secrets security;Spike;Medium;"This spike is timeboxed to 4 hours. 
 
 We should investigate the following: 
 * Move Gradle file secrets (cognito and signature) to GitHub secrets or is there a better alternative? 
 * Is the GoogleService json file (Firebase) safe enough? 
-* Remove unused secrets (SEGES test and prod) - no need to investigate anything, just add to the followup story 
-* Create new fastlane build scripts - no need to investigate anything, just add to the followup story 
+* Remove unused secrets (SEGES test and prod) - no need to investigate anything just add to the followup story 
+* Create new fastlane build scripts - no need to investigate anything just add to the followup story 
  "
 doct0r/LanguageApp; Update map filter;Story;Medium;"We will be updating the filter feature on the map screen so that all filter options are on 1 screen. 
 
@@ -506,7 +506,7 @@ doct0r/LanguageApp; Update map filter;Story;Medium;"We will be updating the filt
  "
 doct0r/LanguageApp; Updated map date picker;Story;Medium;"The date picker will be updated to allow users to more simply select the correct date range where they want to see their measurements on the map. 
 
-This will include removing the arrow from the current filter, removing the slider and adding a calendar for Week, Month and Year. 
+This will include removing the arrow from the current filter removing the slider and adding a calendar for Week Month and Year. 
 
 [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9152%3A4103&mode=dev&t=R02ut8Cldl5BH5Pj-1] 
 
@@ -514,7 +514,7 @@ This will include removing the arrow from the current filter, removing the slide
 doct0r/LanguageApp; Edit username update;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
-To deter users from changing their username multiple times, we are moving this feature to the menu, along with log out and delete account. 
+To deter users from changing their username multiple times we are moving this feature to the menu along with log out and delete account. 
 
 What screens are impacted:  
 * Profile page: https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=13209%3A69870&mode=dev&t=7bmWIGwJjp9Clsmu-1 
@@ -532,11 +532,11 @@ Keys/Strings/translations
 ---------------------------- 
 Test Plan 
 ---------------------------- 
-Tested on: Device, OS version, app version 
+Tested on: Device OS version app version 
 Server: Test/Prod 
-Languages: EN, DK, FR, NL 
+Languages: EN DK FR NL 
 Logged in: Yes/No 
-Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page Have submitted measurements on home screen 
 Test cases 
 Screen:"
 doct0r/LanguageApp; Update target SDK;Story;Medium;"Target the latest Android API 
@@ -584,7 +584,7 @@ doct0r/LanguageApp; Tapping on a submitted Salinity measurement on home screen s
 * *The measurement details is shown* 
 
  "
-doct0r/LanguageApp; Update / add (alt) text throughout the app;Story;Medium;"Provide alternative text for meaningful images, logos, icons as well as all buttons need to be voiced over. 
+doct0r/LanguageApp; Update / add (alt) text throughout the app;Story;Medium;"Provide alternative text for meaningful images logos icons as well as all buttons need to be voiced over. 
 * Via your measurements : 
 ** in ""your measurements"" scre{color:#172b4d}ens : describe arrow button on the measurements to see details ""button for more details"" {color} 
 ** {color:#172b4d}in the ""measurement details"" +edit+ screens : describe arrow button for sample type and soil type ""button to open [soil type/sample type] options"" {color} 
@@ -604,11 +604,11 @@ doct0r/LanguageApp; Update / add (alt) text throughout the app;Story;Medium;"Pro
 ** Describe the profile picture (this will be changed to the logo right ?) as {color:#ffab00}-""This is the profile picture""-  ""This is the logo of the Deltares Aquality App""{color} 
 
 * Via settings : 
-** Describe the arrow icons in settings, to open section {color:#ffab00}""button to open options""{color} 
+** Describe the arrow icons in settings to open section {color:#ffab00}""button to open options""{color} 
 ** Describe the switch button for 'save picture on device' as ""Switch on""/""Switch off"" 
 ** In FAQ : describe the arrow icons in settings  {color:#ffab00}""Expand button"" and to close the section{color} {color:#ffab00}""Collapse button""{color} 
-** In onboarding screens : describe swipe functio{color:#172b4d}n ""Swipe left to see the next screen"", describe ""Explore what's new"", ""skip"" and ""get started"" buttons. And all other text in following screens (currently only the ""welcome in the new app"" is voiced over).{color} 
-** For attachments 6., 7., 8., 9. & 10. : the title + a closing button needs to be implemented {color:#ffab00}(Design needed from designers){color} 
+** In onboarding screens : describe swipe functio{color:#172b4d}n ""Swipe left to see the next screen"" describe ""Explore what's new"" ""skip"" and ""get started"" buttons. And all other text in following screens (currently only the ""welcome in the new app"" is voiced over).{color} 
+** For attachments 6. 7. 8. 9. & 10. : the title + a closing button needs to be implemented {color:#ffab00}(Design needed from designers){color} 
 
 * Via new measurements : 
 ** in the instructions screen: 
@@ -650,7 +650,7 @@ doct0r/LanguageApp; Soil Nmin - view/edit measurement;Story;Medium;"Update Viewi
  "
 doct0r/LanguageApp; Add info screen to NO3/NO3-N switch on manual input screen;Story;Medium;"Description: 
 
-On the manual input screen, the user has the option to switch between NO3 and NO3-N for nitrate, but there is no explanation on what it means for users who are not familiar with the difference. Therefore, we should add the info screen that we also use in the settings to explain the difference between NO3 and NO3-N. (See attached photos) 
+On the manual input screen the user has the option to switch between NO3 and NO3-N for nitrate but there is no explanation on what it means for users who are not familiar with the difference. Therefore we should add the info screen that we also use in the settings to explain the difference between NO3 and NO3-N. (See attached photos) 
 * add the (i) icon to the pop-up where you select between NO3 and NO3-N 
 * add the info screen that we also use in the settings 
 
@@ -679,19 +679,19 @@ doct0r/LanguageApp; Refactor permission logic code for more readability within M
 * the outer switch only has 1 case... so it could be an if statement... 
 * there are too many nested condition statements making it quite difficult to read... 
 
-My suggestion would be to extract parts of if to new smaller functions with meaningful names and reuse where needed. Making it simples, smaller and easier to understand."""
-doct0r/LanguageApp;Keyboard input doesn't work when input field is out of focus;Bug;Low;"Tested on Samsung Galaxy S6, Android 7 
+My suggestion would be to extract parts of if to new smaller functions with meaningful names and reuse where needed. Making it simples smaller and easier to understand."""
+doct0r/LanguageApp;Keyboard input doesn't work when input field is out of focus;Bug;Low;"Tested on Samsung Galaxy S6 Android 7 
 
 *Current behaviour* 
 
-When selecting the description field of a measurement, the keyboard doesn't work when the field is not visible in the screen. 
+When selecting the description field of a measurement the keyboard doesn't work when the field is not visible in the screen. 
 
-In some cases, this can be a positive as you can't make mistakes typing blindly. In other cases, you are still not able to edit even after you can see the field, in which case you need to select another field first and then coming back to it. See the 2 attached videos."
+In some cases this can be a positive as you can't make mistakes typing blindly. In other cases you are still not able to edit even after you can see the field in which case you need to select another field first and then coming back to it. See the 2 attached videos."
 doct0r/LanguageApp; Update button design;Story;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12188); server: test 
 
 Several buttons are missing a border:  
 # Clicking delete on a measurement in edit mode - *Cancel button* (screenshot 1) [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=5523-34775&mode=design&t=UfCDL9Qeti4bQCe9-0]  
-# Edit at least one field of measurement, click on X - *Cancel button* (screenshot 2:  [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=5523-34805&mode=design&t=4YsYgjQfVRpiJDIS-0]  
+# Edit at least one field of measurement click on X - *Cancel button* (screenshot 2:  [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=5523-34805&mode=design&t=4YsYgjQfVRpiJDIS-0]  
 # Measurement details after creating a measurement - *Cancel button* (screenshot 3) (can't find in Figma) {color:#ff8b00} [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=4743%3A31553&mode=design&t=cVU43Q4kLAFEaNyY-1]{color} 
 # Clicking cancel on measurement details screen after creating a measurement - *No button* (screenshot 4). (can't find in Figma) {color:#ff8b00}*Should be the same as the other 3 examples*{color} 
 # Cancel button on Tutorial accessed through + button. - *Cancel button* (screenshot 5) figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7163-39842&mode=design&t=vJcc5yHJGR6SN4Ri-0] "
@@ -747,5 +747,5 @@ Test each case:
 * Tap on edit 
 * Tap the edit location button on the edit screen 
 * The kg N/ha value is displayed *without* a decimal (figma; [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8604-14113&mode=design&t=3OZ96bCSf28dBoF9-0])"
-doct0r/LanguageApp; As a user I want all the webshop form data to be retained when navigating between screens;Story;Lowest;Currently only the personal details are retained, and only while inside the order equipment activity. 
+doct0r/LanguageApp; As a user I want all the webshop form data to be retained when navigating between screens;Story;Lowest;Currently only the personal details are retained and only while inside the order equipment activity. 
 ;;;;
