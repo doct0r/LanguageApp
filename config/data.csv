@@ -1,3 +1,895 @@
-repository;title;labels;description
-doct0r/kpniotworkshop;[iOS] Update Firebase SDK to latest;Epic;Test Description
-doct0r/kpniotworkshop;[IOS] Create release checklist;Story;More test description
+﻿Summary;Issue Type;Priority;Description
+[DEV_IOS] Filter on Group & Soil Nmin on map doesn't show your own measurements;Bug;Medium;"*Tested on:* iOS 17.4.1; Model: Iphone SE; app version 5.2.1 (344) 
+
+When filtering on a Group & Soil Nmin as sample type on map, your own measurements aren't shown.  
+
+*Current* 
+* Open map 
+* Filter on  
+** Parameter: Nitrate 
+** Sample type: Soil Nmin 
+** Privacy and Sharing: A group 
+* *Your own Soil Nmin measurements part of that group aren't shown on the map. Other user's Soil Nmin measurements are shown.* 
+
+*Expected* 
+* *Your own* *and other users'* {*}Soil Nmin measurements part of that group are shown{*}{*}{*} 
+
+_(Note: Filtering on Parameter: Nitrate; Sample type: Show all; Privacy and Sharing: A group - works)_"
+[DEV_IOS] Edit username update;Story;Medium;"---------------------- 
+Description: 
+---------------------- 
+To deter users from changing their username multiple times, we are moving this feature to the menu, along with log out and delete account. 
+
+What screens are impacted:  
+* Profile page: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=13209%3A69870&mode=dev&t=7bmWIGwJjp9Clsmu-1] 
+
+--------------------------- 
+AC/Scope 
+--------------------------- 
+
+—————————————— 
+Keys/Strings/translations 
+---------------------------- 
+||Key||EN||NL||FR||DA|| 
+| |Edit username|Gebruikersnaam bewerken|Modifier le nom d'utilisateur|Rediger brugernavn| 
+
+---------------------------- 
+Test Plan 
+---------------------------- 
+Tested on: Device, OS version, app version 
+Server: Test/Prod 
+Languages: EN, DK, FR, NL 
+Logged in: Yes/No 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Test cases 
+Screen:"
+[DEV_IOS] Move ID share functionality to profile screen;Story;Medium;"---------------------- 
+Description: 
+---------------------- 
+
+Testing has shown that it would be useful to also show your AqualityID on the Group page in profile, making it easier to share the ID verbally if you create a group. 
+
+Because of this, we are allowing the user to share and view their ID from both the profile screen and the groups profile screen. 
+
+What screens are impacted: * 
+* Profile page: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/branch/Y8yzfhWUTMP95wpllUHNr9/Final-Design?type=design&node-id=13221%3A71225&mode=dev&t=dZdB5jfsnJy5Sj2V-1] 
+* Groups profile (CONTENT CHANGE AND UI CHANGE): [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/branch/Y8yzfhWUTMP95wpllUHNr9/Final-Design?type=design&node-id=13205%3A68768&mode=dev&t=dZdB5jfsnJy5Sj2V-1] 
+* Groups info screen: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/branch/Y8yzfhWUTMP95wpllUHNr9/Final-Design?type=design&node-id=9225%3A43939&mode=dev&t=dZdB5jfsnJy5Sj2V-1] 
+
+--------------------------- 
+AC/Scope 
+--------------------------- 
+
+—————————————— 
+Keys/Strings/translations 
+---------------------------- 
+||Key||EN||NL||FR||DA|| 
+|profile_groups_empty_description|You’re not part of any groups yet. Share your Aquality ID to join a group or create your own group below.|Je maakt nog geen deel uit van een groep. Deel je Aquality ID om lid te worden van een groep of maak je eigen groep hieronder.|Vous ne faites partie d'aucun groupe pour le moment. Partagez votre identifiant Aquality pour rejoindre un groupe ou créez votre propre groupe ci-dessous.|Du er ikke en del af nogen grupper endnu. Del dit Aquality-ID for at blive medlem af en gruppe, eller opret din egen gruppe nedenfor.| 
+
+  
+
+---------------------------- 
+Test Plan 
+---------------------------- 
+Tested on: Device, OS version, app version 
+Server: Test/Prod 
+Languages: EN, DK, FR, NL 
+Logged in: Yes/No 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Test cases 
+Screen:"
+[DEV_IOS] can't dismiss keyboard when adding members;Bug;Medium;"When adding members to a group, you cannot dismiss the keyboard, which prevents users from seeing which members they have already added.  
+
+Making it possible to dismiss the keyboard by clicking outside of the keyboard, or alternatively making the member list scrollable so it can reach above the keyboard would solve this issue."
+[DEV_IOS] Add info screen to NO3/NO3-N switch on manual input screen;Story;Medium;"Description: 
+
+On the manual input screen, the user has the option to switch between NO3 and NO3-N for nitrate, but there is no explanation on what it means for users who are not familiar with the difference. Therefore, we should add the info screen that we also use in the settings to explain the difference between NO3 and NO3-N. (See attached photos) 
+* add the (i) icon to the pop-up where you select between NO3 and NO3-N 
+* add the info screen that we also use in the settings 
+
+  
+
+See Figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7245-39840&mode=design&t=v4Bcb4Yqhiel7OOx-4] "
+[DEV_IOS] Update Privacy and Sharing filter on map;Story;Medium;"{color:#de350b}This is related to the new map filter to be implemented SADA-1176 and SADA-1179{color} 
+
+---------------------- 
+Description: 
+---------------------- 
+
+Now that users can filter on Groups on the map, we would like to make the different filters for Privacy and Sharing more clear. Currently, when a user filter on ""My private measurements"", both measurements that are private and shared with groups are shown. We would like to change this filter to ""Only my measurements"" which would then include all the user's measurements (public, private and group) - like the home screen when there's no filter applied.  
+
+We need to make two changes:  
+# Update ""My private measurements"" to ""Only my measurements"" 
+# Make the users' public measurements visible too when selecting ""Only my measurements"" 
+
+Overview of the new filter options: 
+* All public measurements (from ALL users) 
+* Only my measurements (my public, private and group measurements) 
+* Group (measurements from all users in 1 selected group) 
+
+  
+
+What screens are impacted: * 
+* Privacy and Sharing filter on the map 
+
+--------------------------- 
+AC/Scope 
+--------------------------- 
+
+—————————————— 
+Keys/Strings/translations 
+---------------------------- 
+||Key||EN||NL||FR||DA|| 
+
+---------------------------- 
+Test Plan 
+---------------------------- 
+Tested on: Device, OS version, app version 
+Server: Test/Prod 
+Languages: EN, DK, FR, NL 
+Logged in: Yes/No 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Test cases 
+Screen:"
+[DEV_IOS] Update FAQs for deleting and downloading measurements;Story;Medium;"---------------------- 
+Description: 
+---------------------- 
+New text for FAQs to be updated to let the user know how they can delete and download their measurements, and group measurements for admins. 
+
+3 questions in total: How can I download my measurements?  
+Can I download group or organisation measurements?  
+How can I delete my measurements? 
+
+The text can be found on Figma: https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=12422%3A10267&mode=dev&t=EIAKZFsHBwQTB7gl-1 
+
+What screens are impacted: * 
+FAQs 
+
+NOTE - updates to the Deltares dashboard (https://nitrate-app.deltares.nl/) are needed for the groups download to be functional. This work needs to be done before including the question, Can I download group or organisation measurements?  
+
+--------------------------- 
+AC/Scope 
+--------------------------- 
+
+—————————————— 
+Keys/Strings/translations 
+---------------------------- 
+
+||Key||EN||NL||FR||DA|| 
+|||||| 
+
+
+---------------------------- 
+Test Plan 
+---------------------------- 
+Tested on: Device, OS version, app version 
+Server: Test/Prod 
+Languages: EN, DK, FR, NL 
+Logged in: Yes/No 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Test cases 
+Screen:"
+[DEV_iOS][DESIGN_TECH] Replace OpenGL ES;Feature;Medium;"The iOS app ({*}what about Android?{*}) is using OpenGL ES which is deprecated since iOS 12. Apple might stop support with a new version of iOS and there are better alternatives anyway (Vulkan, Metal) so we should move to one of those. 
+
+Instead of replacing it outright, we could consider using a wrapper to Metal e.g. [https://moltengl.com/moltengl/] , [https://github.com/openglonmetal/MGL] or [https://github.com/kakashidinho/metalangle]  
+
+Depending on the situation on Android and if we assume the OpenGL code is shared between the platforms we could consider migrating the code to Vulkan since there are more options on running this on multiple platforms."
+[DEV_IOS] Update flow of group settings;Story;Medium;"---------------------- 
+Description: 
+---------------------- 
+
+When managing group members after you've created the group previously, it takes MANY taps to go back to the home/profile/map screen where you're able to take a measurement.  
+
+When editing various group details, we will change the flow when you press 'Done'.  
+
+*What screens are impacted:*  
+* Edit group name/description: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5261&mode=dev&t=FtfFYIUZfT2wu3Mp-1] 
+
+** _Current:_ when the user presses 'done', they are directed back to the group settings page. 
+** _*NEW:*_ when the user presses 'done' they should be directed back to group profile page ([https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5215&mode=dev&t=FtfFYIUZfT2wu3Mp-1]) 
+* Manage members page: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5248&mode=dev&t=FtfFYIUZfT2wu3Mp-1] 
+
+** {_}Current{_}: the user has to press the back button twice to go back to the group profile page (once to settings and once to group profile) 
+** _*NEW:*_ We are adding a new 'Done' button in the top right corner. When this is pressed, the user should be taken directly back to the group profile page ([https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10043%3A5215&mode=dev&t=FtfFYIUZfT2wu3Mp-1]) 
+
+--------------------------- 
+AC/Scope 
+--------------------------- 
+
+—————————————— 
+Keys/Strings/translations 
+---------------------------- 
+||Key||EN||NL||FR||DA|| 
+
+---------------------------- 
+Test Plan 
+---------------------------- 
+Tested on: Device, OS version, app version 
+Server: Test/Prod 
+Languages: EN, DK, FR, NL 
+Logged in: Yes/No 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Test cases 
+Screen:"
+[DEV_IOS] Organisation screen is fullscreen instead of swipe down;Bug;Medium;Think about how this behaviour should work
+[DEV_IOS] Discarding an edited measurement takes user to home screen;Bug;Medium;"*Tested on:* iOS 16.6; Model: Iphone SE; app version 5.0.3 (134); server: test 
+
+*Current situation* 
+* Open app 
+* Tap on a measurement on home screen 
+* Tap on edit on measurement details screen 
+* Edit any field/value/position of the measurement 
+* Tap on 'X' button 
+* Tap on 'Yes' on the pop-up that asks if user wants to discard changes 
+* *user returns to home screen* 
+
+*Expected:* 
+* Open app 
+* Tap on a measurement on home screen 
+* Tap on edit on measurement details screen 
+* Edit any field/value/position of the measurement 
+* Tap on 'X' button 
+* Tap on 'Yes' on the pop-up that asks if user wants to discard changes 
+* *user returns to measurement details screen* (so the user can see that changes were discarded) (see screenshot figma) 
+
+*Figma:* https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=5466%3A34816&mode=design&t=Gttno0jXcp4HKCRP-1"
+[DEV_IOS] User doesn't arrive at home screen after submitting a measurement;Bug;Medium;"User should always arrive at home screen after submitting a measurement - even though user tapped + from any other screen (map, settings, profile).  
+
+*Current* 
+* Tap on plus from any other screen than home 
+* create a measurement (either with or without NL results screen) 
+* submit 
+* *arrive at the screen user was at when tapping +* 
+
+*Expected* 
+* *arrive at home screen*"
+[IOS] Create release checklist;Story;Medium;"---------------------- 
+Description: 
+---------------------- 
+Deltares have asked us to share a release checklist based on the changes we have made to the process 
+
+--------------------------- 
+AC/Scope 
+--------------------------- 
+* Identify new elements we need to highlight  
+* Use the one we have internally and enhance it accounting for their lack of knowledge of the new things we added 
+* Our release checklist: [https://ibm.ent.box.com/notes/1383575917328]  
+
+—————————————— 
+Keys/Strings/translations 
+---------------------------- 
+||Key||EN||NL||FR||DA|| 
+
+---------------------------- 
+Test Plan 
+---------------------------- 
+Tested on: Device, OS version, app version 
+Server: Test/Prod 
+Languages: EN, DK, FR, NL 
+Logged in: Yes/No 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Test cases 
+Screen:"
+[DEV_IOS] Changing tabs in manual input affects swiping between tabs on home screen;Bug;Medium;"*Tested on:* iOS 17.5.1; Model: Iphone SE; app version 6.1 (396) 
+
+Changing the tabs in manual input (accessed from camera) affects the swiping between tabs on home screen after submitting a measurement.  
+
+*Current* 
+
+Note: you can start the test on any parameter tab on home screen, to explain it, here is one example:  
+* start on Nitrate tab 
+
+* tap on + 
+
+* tap on manual input 
+
+* change to Ammonium tab 
+
+* input value 
+
+* submit measurement 
+* user arrive at ammonium tab 
+* swipe to the left 
+* *user goes to Nitrate tab* (the tab where user started before taking the measurement) 
+* swipe to the right 
+* *user goes to Ammonium tab* (back to the one related to the previous measurement) 
+
+*Expected* 
+* start on Nitrate tab 
+
+* tap on + 
+
+* tap on manual input 
+
+* change to Ammonium tab 
+
+* input value 
+
+* submit measurement 
+* user arrive at ammonium tab 
+* swipe to the left 
+* *user goes to Phosphate tab* 
+* swipe to the right 
+* *user goes to Salinity tab* "
+[DEV_iOS] Refactor Measurement (Send) Detail Page;Story;Medium;"Currently we have two different detail pages: 
+* initial measurement 
+* read/edit measurement 
+
+With this story we like to refactor this into one viewcontroller that can handle both scenarios. 
+
+Also, show the selected nitrate unit always first (now NO3 shows first) 
+
+Fix SADA-1002  
+
+*AC:* 
+* Add subtext for visibilities 
+* .."
+[DEV_IOS] NH4-N vs NH4;Story;Medium;"---------------------- 
+Description: 
+---------------------- 
+
+As users might register Ammonium in NH4 or NH4-N, the app should support both (in a similar way as NO3 and NO3-N is handled). 
+The database however should always store the NH4-N value. ({color:#ff8b00}NH4 = NH4-N * 1.28786{color}) 
+
+--------------------------- 
+AC/Scope 
+--------------------------- 
+# On the Manual Input screen, the user should be able to enter values as NH4 (They will be calculated into NH4-N before submitting to the database) 
+# On the Manual Input screen, the user should be able to enter values as NH4-N 
+# On the Manual input screen, the user should be able to toggle between NH4 and NH4-N (the text should toggle in a similar way) 
+# On the Settings screen, the user can select a default unit for Ammonium 
+# On the Measurement detail screens, the unit in the blue bar will be displayed as default unit (big) and not selected unit (small), just like Nitrate 
+# On the Measurement Overview (Home) screen, the measurement type selector shows the unit (selected in Settings): (Ammonium (NH4-N) or Ammonium (NH4)) 
+# On the Measurement Overview (Home) screen, in case NH4 has been selected the values from the database have to be calculated from NH4-N to NH4 before showing 
+# On the Measurement Overview Help screen all values are displayed as NH4-N (already implemented) 
+# There are always 2 decimals input and displayed. 
+
+  
+
+—————————————— 
+Keys/Strings/translations 
+---------------------------- 
+||Key||EN||NL||FR||DA|| 
+
+---------------------------- 
+Test Plan 
+---------------------------- 
+Tested on: Device, OS version, app version 
+Server: Test/Prod 
+Languages: EN, DK, FR, NL 
+Logged in: Yes/No 
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+Test cases 
+Screen:"
+[DEV_IOS] Map doesn't go to offline mode unless you turn off the internet while at the map;Bug;Medium;"*Current* 
+
+The only way to show the map on offline mode is to be at the map, then turn off internet.  
+
+*Expected* 
+
+The popup should come the first time you open the map and are offline and the no internet sign should remain at all times when there's no internet"
+[DEV_iOS] When you add a measurement while offline you don't see it in the overview list;Bug;Medium;
+[DEV_IOS] Can add myself as a member of a group, I am now Admin and member;Bug;Medium;"*Current* 
+# Create group 
+# Add members 
+# Type in your own AqualityID 
+# 'Admin, member' appears next to your name (you are now Admin AND member) 
+
+
+*Expected* 
+# Create group 
+# Add members 
+# Type in your own AqualityID 
+# Error should show saying 'member already part of group'"
+[DEV_IOS] Spacing between paragraphs on all info screens is too large;Bug;Medium;"*Tested on:* iOS 17.4.1; Model: Iphone SE; app version 5.2.1 (347) 
+
+Spacing between paragraphs on all info screens throughout the app is too large. 
+
+See screenshots for examples"
+[DEV_IOS] Automatically logged in on fresh install;Bug;Medium;"*Current* 
+# Delete app 
+# Reinstall app 
+# Go to profile 
+# Press log in 
+# *Automatically logs in without Amazon portal appearing* 
+
+*Expected* 
+# Delete app 
+# Reinstall app 
+# Go to profile 
+# Press log in 
+# *Amazon modal pops up with options to sign in*"
+[DEV_IOS] Info button is very close to the ‘Select default sample type’ text;Bug;Medium;"*Current* 
+# Delete app 
+# Re-install 
+# Press blue button 
+# Instructions appear 
+# Press continue 
+# Default sample type pop up 
+# *Info button is too close to 'Select default sample type' title (see image attached)* 
+
+  
+
+*Expected* 
+# Delete app 
+# Re-install 
+# Press blue button 
+# Instructions appear 
+# Press continue 
+# Default sample type pop up 
+# *Info button is on the right of the pop up (same as other pop ups)*"
+[DEV_IOS] Default group in settings doesn’t save when logging out and back in again;Bug;Medium;"*Current* 
+# Set 'Group x' as default Privacy in settings 
+# Log out 
+# Log in 
+# *Private is the default privacy* 
+
+  
+
+*Expected* 
+# Set 'Group x' as default privacy in settings 
+# Log out 
+# Log in 
+# *Group x is default privacy setting*"
+[DEV_IOS] Hach test strips link in tutorial & webshop is wrong in ENG;Bug;Medium;"*Tested on:* iOS 17.4.1; Model: Iphone SE; app version 5.2.1 (3) 
+
+*IN ENG ONLY* 
+
+The Hach test strips link in the tutorial & webshop directs you to the Hach website where you need to select your region. Once you've done this you're redirected to the general page for that region, not directly to specific test trips. 
+
+See sub-tasks for more details."
+[DEV_IOS] Tapping twice on a measurement detail disables save button;Bug;Medium;"*Tested on:* iOS 17.4.1; Model: Iphone SE; app version 5.2.1 (344) 
+
+Tapping twice on a measurement detail disables save button.  
+
+*Current* 
+* Tap on a measurement on home screen 
+* Tap on edit 
+* Tap on any field to edit, for example sample type 
+* Change sample type to Groundwater 
+* Save button enables 
+* Tap on sample type again 
+* Tap on Groundwater again 
+* *Save button disables (see screen rec)* 
+
+*Expected* 
+* *Save button remains enabled*"
+[DEV_IOS] Error message sometimes doesn't appear instantly or at all;Bug;Medium;"*Reproduction steps* 
+* Turn off internet 
+* Open app 
+* Open map 
+
+*Current* 
+* Error message doesn't show up instantly. Only after pressing the date modal one or a few times or turning on flightmode when the map is already open. Sometimes it doesn't show at all. 
+
+*Expected* 
+* Error message show up as soon as you open the map from any screen."
+[DEV_iOS] Editing a filtered measurement shows the success dialog for only a brief second instead of 3s;Bug;Medium;"{*}Repro{*}: 
+# Log in 
+# Filter by group 
+# Tap on a measurement that came from the filtering result 
+# Edit 
+# Change anything (soil type for example) 
+# Save 
+
+*Expected outcome:* 
+
+{color:#00875a}If the save was successful, the success dialog should be shown for *3s.*{color} 
+
+*Actual outcome:* 
+
+{color:#de350b}The success dialog shows for less than a second.{color}"
+[DEV_IOS] Refactor RIVM related files;Story;Medium;"Convert following files to swift: 
+- CategoryPercentiles.m 
+- PercentilePeriod.m 
+- NitratePercentile.m 
+- RivmSoilTypePercentileMatcher.m 
+- SoilTypeHelper 
+
+Move everything to a better location (only related to result screen)"
+[DEV_IOS] Update / add (alt) text throughout the app;Story;Medium;"Provide alternative text for meaningful images, logos, icons as well as all buttons need to be voiced over. 
+* Via your measurements : 
+** in ""your measurements"" screens : describe arrow button on the measurements to see details {color:#ffab00}""button to open options"" {color} 
+** in the ""measurement details"" +edit+ screens : describe arrow button for sample type and soil type {color:#ffab00}""button to open options"" {color} 
+** in ""measurement details"" screens : 
+*** describe the text and data in the blue field 
+*** describe the localization button in the map {color:#ffab00}""localization button""{color} 
+
+* Via map : 
+** In the upper time table : 
+*** Describe the arrows for previous and next week {color:#ffab00}""button previous week"" ""button next week"" {color} 
+*** Describe the arrow to open and close more options {color:#ffab00}""button to open the timelaps filter options"" {color} 
+*** Describe the slidebar {color:#ffab00}""slidebar"" {color} 
+** In the filter icons below : 
+*** When opening the filters : the arrow icons {color:#ffab00}""button to open options"" {color} 
+
+* Via profile: 
+** Describe the profile picture as {color:#ffab00}""This is the profile picture"" {color} 
+
+* Via settings : 
+** Describe the arrow icons in settings  {color:#ffab00}""Button"" {color} 
+** Describe the switch button for ""save picture on device {color:#ffab00}""Button"" {color} 
+** In FAQ : describe : the arrow icons in settings  {color:#ffab00}""Button""{color} 
+** In onboarding screens : describe swipe function {color:#ffab00}""Swipe button""{color} 
+** For attachments 6., 7., 8., 9. & 10. the title + a closing button need to be implemented {color:#ffab00}(Design needed from designers){color} 
+
+* Via new measurements : 
+** in the instructions screen: 
+*** Describe hyperlinks as {color:#ffab00}""link""{color} 
+*** Bulletpoints : the text after bulletpoints isn't voiced over in a proper order: First the bulletpoints are mentioned then the text below the bulletpoints and afterwards comes the text after the bulletpoints. This is incorrect. Text of bulletpoints should be mentioned throughout the bulletpoints."
+[DEV_IOS] Accommodate for Accessibility: Text size;Story;Medium;"---------------------- 
+*Description:* 
+---------------------- 
+The user is able to see all text and use all buttons/functions in the app when they have enabled a larger text size in their phone's accessibility settings. The text size should be fixed and always the same size.  
+
+*What screens are impacted:* 
+* *All screens* (Home, Map, Camera, Manual input, Edit, Tutorial, Info, Settings (incl. each setting), Profile) 
+* *All buttons* 
+* *All pop-up/error messages* 
+
+--------------------------- 
+*AC/Scope* 
+--------------------------- 
+Things that are useful to know 
+- Log in/out: both in scope incl. amazon cognito website 
+- Which measurement type: all 
+
+--------------------------- 
+
+*Keys/Strings/translations* 
+---------------------------- 
+N/A 
+---------------------------- 
+*Test Plan* 
+---------------------------- 
+*Test on:* iOS 16.6; Model: Iphone SE; app version 5.0.3 (){*}{{*}}{*}Server:{*} Test 
+*Languages:* EN, DK, FR, NL 
+*Logged in:* Yes/No 
+*Pre-reqs:* Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
+  
++*Test cases*+ 
+*Screen:*  
+
+---------------------------- 
+*Screenshots* 
+---------------------------- 
+See screenshots for where the text size is not fixed"
+[DEV_IOS] Investigate app secrets security;Spike;Medium;"This spike is timeboxed to 4 hours. 
+
+We should investigate the following: 
+* Move secrets from JSON files (cognito and signature) to keychain (or is there a better option) 
+* Is the GoogleService file (Firebase) safe enough? 
+* Can we obfuscate the code? 
+* Remove unused secrets (SEGES test and prod) - no need to investigate anything, just add to the followup story 
+  
+ "
+[DEV_IOS] Updated map date picker;Story;Medium;"The date picker will be updated to allow users to more simply select the correct date range where they want to see their measurements on the map. 
+
+This will include removing the arrow from the current filter, removing the slider and adding a calendar for Week, Month and Year. 
+
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9152%3A4103&mode=dev&t=R02ut8Cldl5BH5Pj-1] 
+
+ "
+[DEV_IOS] Update map filter;Story;Medium;"We will be updating the filter feature on the map screen so that all filter options are on 1 screen. 
+
+[https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9081%3A113669&mode=dev&t=piOAXsrqd5BvhfI9-1] 
+
+ "
+[DEV_IOS] Bug to story: App sometimes crashes when pressing back arrow on manual input screen;Bug;Medium;"App sometimes crashes when pressing back arrow on manual input screen (logged in and out) 
+
+*Found on:* iOS 16.6; Model: Iphone SE; app version 5.0.3 (160); server: test 
+
+*reproduction steps:* 
+* open app (logged in or out) 
+* tap on + 
+* tap on get started 
+* tap on manual measurement 
+* either add or don't add value 
+* switch to another tab 
+* tap on back arrow 
+* app crashes (not every time) 
+
+ "
+[DEV_IOS] Issues with the internet error message for submitting a measurement;Bug;Medium;"*Tested on:* iOS 16.6; Model: Iphone SE; app version 5.0.3 (135); server: test 
+
+When the user doesn't have internet and taps to submit a new measurement, there is an error message notifying the user that there is no internet connection, but that the measurement will be saved and uploaded as soon as the connection is restored. There are two issues with this message, see sub-tasks.  
+h4."
+[DEV_iOS] Measurement repository can do create/update/delete;Story;Medium;"*Description* 
+
+With this MeasurementRepository we want to make it easier to deal with Measurements. Currently there is a lot of converting from strings to json and vice versa.  
+
+The refactoring should move capabilities from `SendMeasurements.h/.m` to the MeasurementRepository: 
+* Sending pending measurements in background 
+* Create a measurement 
+* Update a measurement 
+* Delete a measurement 
+
+  
+
+  
+{code:java} 
+`SendMeasurements.m` headers 
+  
+- (void) sendPendingMesurementsInBackground; 
+- (void) sendMeasurementToService: (NSString *) jsonData  checkErrors: (BOOL) checkErrors calledBy:(id)calledBy withSuccess:(SEL)successCallback andFailure:(SEL)failureCallback; 
+
+- (void) updateMeasurementToService: (NSString *) jsonData privacy:(NSString *)privacy checkErrors: (BOOL) checkErrors calledBy:(id)calledBy withSuccess:(SEL)successCallback andFailure:(SEL)failureCallback; 
+- (void) deleteMeasurementToService: (NSString *) jsonData checkErrors: (BOOL) checkErrors calledBy:(id)calledBy withSuccess:(SEL)successCallback andFailure:(SEL)failureCallback;{code} 
+  
+
+  
+
+*AC:* 
+* Create a measurement 
+* Update from sent measurement 
+* Delete from sent measurements 
+* Handle pending / send measurements from MeasurementRepository 
+* Unit tested 
+
+*Architecture idea:* 
+* Create a RemoteMeasurementRepository that is responsible for the network calls: 
+** get a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-get]) 
+** get all public measurements operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#_public_and_private_measurements)] 
+** get all private measurements operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#_public_and_private_measurements)] 
+** create a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-create]) 
+** update a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-update]) 
+** delete a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-delete)] 
+** search a measurement operation ([https://nitrate-app-test.deltares.nl/apidoc/html5/api-guide.html#resources-waterqualitymeasurements-search]) 
+* Extend the current MeasurementRepository with remote measurement capabilities"
+[DEV_iOS] LoginViewController to Swift;Story;Medium;"Description
+
+Scenarios
+
+Examples
+
+We distinct between two kinds of features:
+1 - Features that requires an Epic (containing multiple Stories)
+2 - Features that do not require an Epic (containing one Story)
+
+In case a feature requires an Epic, the process starts with the DESIGN_EPIC procedure, all other features will start with the DESIGN_TECH procedure.
+
+- - - - - - - BEGIN DESIGN_EPIC Procedure - - - - - - - 
+1. Create new Epic
+2. Create a DESIGN_EPIC story
+3. Assign the DESIGN_EPIC story to the Epic
+----> ensure that the description field of the story has a link to the Epic
+4. Move the DESIGN_EPIC story from Backlog to ""Discovery In Progress""
+5. Write the Epic (Involve other team members!!).
+6. Create all Epic related Stories one by one and assigned to this Epic
+----> each Story follows DESIGN_(TECH/UI/CONTENT) or DEV procedure
+
+When all stories have status ""Discovery Ready for Design/Development""
+7. Review Epic (Rob & Michelle & Melle & Lisa & Dimitris)
+8. Sign-off Rob: DESIGN_EPIC story to ""Discovery Ready for Design/Development""
+9. Demo/Discuss in weekly update with Joachim
+- - - - - - - END DESIGN_EPIC Procedure - - - - - - - 
+
+- - - - - - - BEGIN DESIGN_UI Procedure - - - - - - - 
+1. Move this Story from Backlog to ""Discovery In Progress""
+2. Check if all design requirements are clear
+3. Create or update design in Figma
+4. If content is required, create a new content story and assign to Epic
+5. Check design against basic Accessibility requirements
+6. If localisation is applicable, create localisation stories and assign to Epic. 
+7. Move this story to ""Discovery Ready for Review""
+8. Review Epic (Rob & Michelle & Melle (± Dimitris))
+9. Sign-off Rob: Story to ""Discovery Ready for Design/Development""
+10. Demo/Discuss in weekly update with Joachim
+????? Convert User Stories into Design/Development stories.
+- - - - - - - END DESIGN_UI - - - - - - - 
+
+- - - - - - - BEGIN DESIGN CONTENT - - - - - - - 
+- Move this Story from Backlog to ""Discovery In Progress""
+- Check if all design requirements are clear
+- Create or update design ??(in Figma)
+- If localisation is applicable, create localisation stories and assign to Epic. 
+- Move this story to ""Discovery Ready for Review""
+- Review Epic (Rob & Michelle)
+- Sign-off Rob: Story to ""Discovery Ready for Design/Development""
+? Demo/Discuss in weekly update with Joachim
+- Convert User Stories into Development stories.
+- - - - - - - END DESIGN CONTENT - - - - - - - 
+
+- - - - - - - BEGIN DEVELOPMENT - - - - - - - 
+- Assign Story-point to User Story
+- Move this Story to Sprint
+- Check if all requirements are clear
+- Move this story to ""Awaiting Feedback""
+- Review Epic (Melle (& Dimitris))
+- Move this story to ""Test""
+- Testing coordinated by Test Manager
+- Sign-off Test Manager: Story to ""Done""
+- - - - - - - END DEVELOPMENT - - - - - - -"
+[DEV_iOS] Implement new networking;Story;Medium;"- Current networking requests are: 
+
+** MapViewController.m (NSURL) 
+*** fetchMeasurements 
+** SendMeasurements.m (NSURL) 
+*** post a measurement 
+*** update a measurement 
+*** delete a measurement 
+** AppDelegate.m (AFHTTPRequestOperation) 
+*** readMonitoringLocationsFromGeoJson 
+** 
+*** firstLoadHttp? still needed? 
+** LocationService.m (AFHTTPRequestOperation) 
+*** readLocationsFromGeoJson (not called?) 
+*AC:* 
+
+** Introduce a MeasurementService 
+*** get measurements (for the map) 
+*** create measurement 
+*** edit measurement 
+*** delete measurement 
+**  "
+[DEV_iOS] Measurement repository can handle sent / pending measurements;Story;Medium;"*Description* 
+
+With this MeasurementRepository we want to make it easier to deal with Measurements. Currently there is a lot of converting from strings to json and vice versa.  
+
+The refactoring should move capabilities from `SendMeasurements.h/.m` to the MeasurementRepository: 
+* Sending pending measurements in background 
+
+*AC:* 
+* Handle pending / send measurements from MeasurementRepository 
+* Unit tested"
+[DEV_IOS] Handle BE error messages properly;Story;Medium;"----------------------
+Description:
+----------------------
+A short description of what the story is and what is new etc...
+
+What screens are impacted: * 
+
+---------------------------
+AC/Scope
+---------------------------
+
+——————————————
+Keys/Strings/translations
+----------------------------
+
+||Key||EN||NL||FR||DA||
+||||||
+
+
+----------------------------
+Test Plan
+----------------------------
+Tested on: Device, OS version, app version
+Server: Test/Prod
+Languages: EN, DK, FR, NL
+Logged in: Yes/No
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen
+Test cases
+Screen:"
+[DEV_IOS][Dependency on Rudie] Change Nitrate (soil Nmin) to Soil Nmin and Nitrate (water) to Nitrate;Story;Medium;"Update the wording of how we describe nitrate parameters. 
+
+This is based on feedback from users (farmers specifically), that soil nmin is seen as something separate from Nitrate. 
+
+Therefore 'Nitrate' will become two separate parameters; Nitrate (Soil Nmin) isn't actually measuring Nitrate in Soil. It is it's own thing so should actually just be called 'Soil Nmin'. This would then mean Nitrate (water) is just 'Nitrate'. 
+
+See checklist for the screens affected"
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+;;;
+[DEV_IOS] Local measurements are not updated after a group is deleted by an admin in another device;Bug;Low;"*Tested on:* iOS 17.2.1; Model: Iphone SE; app version 5.2 (269) 
+*Server:* Test 
+*Logged in:* Yes & No 
+
+*Rep. steps.* 
+* Create a group at a device making yourself the owner 
+* Add another user to that group 
+* Using that other user and at a different device add a measurement to that group  
+* Using the original device and account, delete that group. 
+* *The member of the group with the measurement can still see the local measurement as part of the group that was deleted until the local measurements list gets updated* 
+
+*Expected* 
+* Create a group at a device making yourself the owner 
+* Add another user to that group 
+* Using that other user and at a different device add a measurement to that group  
+* Using the original device and account, delete that group. 
+* *The member of the group with the measurement should immediately see that the local measurement is now private*"
+[DEV_IOS] Change 'submit' text in soil Nmin instructions (all languages);Bug;Low;"*iPhone SE (2022), version 192* 
+
+*Current (FRENCH)* 
+
+Step 11 of soil Nmin instructions says 'sur ""submit"" pour le...', however the button on measurement details page shows ""Soumettre"" 
+
+*Desired (FRENCH)* 
+
+Text in instructions should say 'sur ""soumettre"" pour le...' 
+
+  
+
+*Current (DANISH)* 
+
+Step 11 of soil Nmin instructions says 'tryk pa ""submit"" for at...', however the button on measurement details page shows ""Indsend"" 
+
+*Desired (DANISH)* 
+
+Text in instructions should say 'sur ""indsend"" pour le...' 
+
+ "
+[DEV_IOS] Update button design;Story;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12188); server: test 
+
+Several buttons are missing a border:  
+# Measurement details after creating a measurement - *Cancel button* (screenshot 1) {color:#ff8b00}Charlie to add figma {color} 
+# Clicking cancel on measurement details screen after creating a measurement  - *Notification has iOS design rather than Aquality*  (screenshot 2) ** {color:#ff8b00}Charlie to add figma {color}"
+[DEV_iOS] MAP - Refactor MapViewFilterViewController;Story;Low;"----------------------
+Description:
+----------------------
+A short description of what the story is and what is new etc...
+
+What screens are impacted: * 
+
+---------------------------
+AC/Scope
+---------------------------
+
+——————————————
+Keys/Strings/translations
+----------------------------
+
+||Key||EN||NL||FR||DA||
+||||||
+
+
+----------------------------
+Test Plan
+----------------------------
+Tested on: Device, OS version, app version
+Server: Test/Prod
+Languages: EN, DK, FR, NL
+Logged in: Yes/No
+Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen
+Test cases
+Screen:"
+[DEV_iOS] MAP - MapViewController to Swift;Story;Low;"We like to refactor the MapViewController to a Swift version. 
+
+*AC:* 
+* Restructure the Map folder 
+* Create a date picker component 
+* Show a map with measurements as annotation with different colors 
+* Show current user location 
+* Make sure the map can show different map types 
+* Make sure the filter works 
+* Make sure move to current location works 
+* Make sure the map is showing according to the user settings 
+* Show no internet connection popup 
+
+*Out of scope:* 
+* New design 
+* Custom Annotation (other story) 
+* Filter view (other story)"
+[DEV_iOS] MAP - CustomAnnotation to Swift;Story;Low;"The custom annotation is respsobile for how the measurement is displayed on the map.  
+
+The custom annotation should show in a different color per measurement type and measurement value. 
+
+In this story we like to refactor the following components: 
+* 
+** CustomAnnotation.h/.m to Swift 
+** CustomAnnotationView.h/.m to Swift 
+** CustomMKPointAnnotatoin.h/.m Swift 
+**  "
+[DEV_IOS] User stuck with loading icon when editing right after turning on internet;Bug;Lowest;"Right after turning on internet it is possible to edit a measurement. If the user edits within 30 seconds of turning on the internet, the user gets stuck with a loading icon. It should not be possible to edit a measurement within the first 30 seconds of turning internet on.  
+
+*Reproduction steps:*  
+# Turn off internet 
+# Open app 
+# Tap on a submitted measurement on home screen 
+# Turn on internet 
+
+*Current* 
+* User is able to tap on edit on measurement details screen within 30 seconds from turning on internet 
+* Able to edit a field  
+* Tap on submit 
+* A loading icon appears and doesn't disappear  
+
+*Expected* 
+* User should not be able to tap on edit on measurement details screen within 30 seconds from turning on internet  
+
+ "
+;;;
