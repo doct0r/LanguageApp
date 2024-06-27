@@ -1,12 +1,12 @@
-﻿Summary;Issue Type;Priority;Description
- Remove auto log in, when logging in with Google account;Story;High;"Current behaviour: 
+﻿Repository;Title;Labels;Priority;Project
+doct0r/LanguageApp; Remove auto log in when logging in with Google account;Story;High;"Current behaviour: 
 
 When you have previously logged in with Google, and logged out again: the second time, and all times after that, when you log in with google, you get automatically logged in without having to input username or password. So in the case that someone changes their google details they can't change account. Even after having reinstalled the app multiple times and deleted all app data, you still log in automatically when pressing google log in.  
 
 Desired behaviour: 
 
 Allow users to log in again manually (entering mail and password) after having previously logged in with Google and logged out."
- Previous sample & soil type not remembered when editing with filter active;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 6.0.2 (13137) 
+doct0r/LanguageApp; Previous sample & soil type not remembered when editing with filter active;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 6.0.2 (13137) 
 
 *Current* 
 * Apply a filter (group or group+own) 
@@ -17,7 +17,7 @@ Allow users to log in again manually (entering mail and password) after having p
 
 *Expected* 
 * *A radio button is filled to visualise the current choice*"
- Move ID share functionality to profile screen;Story;Medium;"---------------------- 
+doct0r/LanguageApp; Move ID share functionality to profile screen;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 
@@ -52,7 +52,7 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
- Update FAQs for deleting and downloading measurements;Story;Medium;"---------------------- 
+doct0r/LanguageApp; Update FAQs for deleting and downloading measurements;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 New text for FAQs to be updated to let the user know how they can delete and download their measurements, and group measurements for admins. 
@@ -90,7 +90,7 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
- Selecting a soil nmin weight on devices with very small screens is difficult or even impossible;Bug;Medium;"*Repro:* 
+doct0r/LanguageApp; Selecting a soil nmin weight on devices with very small screens is difficult or even impossible;Bug;Medium;"*Repro:* 
 
 Start a soil nmin measurement 
 
@@ -107,7 +107,7 @@ In the screenshots it can be observed that the weight input is not visible and s
 *Proposed solution:* 
 
 Hide map on this screen if the screen height is below a certain value."
- Update flow of group settings;Story;Medium;"---------------------- 
+doct0r/LanguageApp; Update flow of group settings;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 
@@ -144,7 +144,7 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
- User doesn't arrive at home screen after submitting a measurement (only after NL results);Bug;Medium;"User should always arrive at home screen after submitting a measurement - even though user tapped plus from any other screen (map, settings, profile).  
+doct0r/LanguageApp; User doesn't arrive at home screen after submitting a measurement (only after NL results);Bug;Medium;"User should always arrive at home screen after submitting a measurement - even though user tapped plus from any other screen (map, settings, profile).  
 
 *Current* 
 * Tap on plus from any other screen than home 
@@ -154,7 +154,7 @@ Screen:"
 
 *Expected* 
 * *arrive at home screen*"
- Editing with filter active doesn't apply changes until filter is cleared;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 6.0.2 (13137) 
+doct0r/LanguageApp; Editing with filter active doesn't apply changes until filter is cleared;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 6.0.2 (13137) 
 
 *Current* 
 * Apply a filter (group or group+own) 
@@ -178,10 +178,10 @@ Screen:"
 * *+edit is+ applied on home screen (if value was edited)* 
 * tap on the measurement again 
 * *+new+ details are shown*"
- When killing app and reopening it, remember filters;Story;Medium;"At the moment, when the app is killed and reopened, the filter a logged in user had applied will be lost and needs to be reapplied. 
+doct0r/LanguageApp; When killing app and reopening it, remember filters;Story;Medium;"At the moment, when the app is killed and reopened, the filter a logged in user had applied will be lost and needs to be reapplied. 
 
 We'd like to keep the filter on for users who will only be filtering on their group measurements"
- NH4-N vs NH4;Story;Medium;"---------------------- 
+doct0r/LanguageApp; NH4-N vs NH4;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 
@@ -218,7 +218,7 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
- Disabling the GPS spams the user with pop ups about improving the experience by turning on location;Bug;Medium;"*Repro:* 
+doct0r/LanguageApp; Disabling the GPS spams the user with pop ups about improving the experience by turning on location;Bug;Medium;"*Repro:* 
 
 Disable the GPS location from the Android device settings 
 
@@ -231,9 +231,9 @@ Going through the app will keep triggering the ""For a better experience, turn o
 *Expected:* 
 
 Tapping *No, thanks* once should be enough to not see it until the app is killed and reopened"
- webshop image overlaps with text;Bug;Medium;In the webshop, when selecting Salinity -> Stickers -> Print manually , the image of the salinity meter overlaps with the text (see screenshot)
- Link to Hach strips has an icon at the end of it that takes you to the app webshop when clicked;Bug;Medium;In the tutorial there is a link to the Hach test strips that should take you to the Hach website. At the end of that link there is an icon (hyperlink) that is actually a different link that points to the webshop within the app. This should all be one link to the Hach website.
- Image colors are calculated on DB values and not rounded values;Bug;Medium;"Some scenarios will cause the frontend to display two different colors for the same value. 
+doct0r/LanguageApp; webshop image overlaps with text;Bug;Medium;In the webshop, when selecting Salinity -> Stickers -> Print manually , the image of the salinity meter overlaps with the text (see screenshot)
+doct0r/LanguageApp; Link to Hach strips has an icon at the end of it that takes you to the app webshop when clicked;Bug;Medium;In the tutorial there is a link to the Hach test strips that should take you to the Hach website. At the end of that link there is an icon (hyperlink) that is actually a different link that points to the webshop within the app. This should all be one link to the Hach website.
+doct0r/LanguageApp; Image colors are calculated on DB values and not rounded values;Bug;Medium;"Some scenarios will cause the frontend to display two different colors for the same value. 
   
 Below is a example 
 
@@ -244,7 +244,7 @@ Below is a example
 3) Then go to home 
   
 4) You will have 2 measurements of the same value, but different colours"
- Soil nmin sample type not populating after being on the salinity tab;Bug;Medium;"*Repro:* 
+doct0r/LanguageApp; Soil nmin sample type not populating after being on the salinity tab;Bug;Medium;"*Repro:* 
 # Set your default sample type to Soil Nmin 
 # Start a new measurement 
 # Select the Salinity tab (probably works with Phosphate and Ammonium too) 
@@ -256,17 +256,17 @@ Below is a example
 # Tap on Done *Expected:* Soil Nmin should be selected {*}Actual{*}: Select sample type is seen instead 
 # Tap on the Sample Type 
 # Select Soil Nmin *Expected:* Soil Nmin should be dark blue and font franca_medium *Actual:* The font is light blue, italic (see attachment) "
-Sometimes the soil layers don't load on time;Bug;Medium;Not clear how to reproduce, but sometimes the background service that loads the Dutch ground layers doesn't load on time and the Continue button that leads to the Results screen does not appear
-[Dependency on Rudie] Change Nitrate (soil Nmin) to Soil Nmin and Nitrate (water) to Nitrate;Story;Medium;"Nitrate (Soil Nmin) isn't actually measuring Nitrate in Soil. It is it's own thing so should actually just be called 'Soil Nmin'. 
+doct0r/LanguageApp;Sometimes the soil layers don't load on time;Bug;Medium;Not clear how to reproduce, but sometimes the background service that loads the Dutch ground layers doesn't load on time and the Continue button that leads to the Results screen does not appear
+doct0r/LanguageApp;[Dependency on Rudie] Change Nitrate (soil Nmin) to Soil Nmin and Nitrate (water) to Nitrate;Story;Medium;"Nitrate (Soil Nmin) isn't actually measuring Nitrate in Soil. It is it's own thing so should actually just be called 'Soil Nmin'. 
 
   
 
 This would then mean Nitrate (water) is just Nitrate."
-;;;
-;;;
-;;;
- Update the list of API error codes and their translations;Feature;Medium;Rudie added more API error codes, we should update our list as well to match it
- Refactoring Profile Screen in Kotlin;Story;Medium;"Description
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp; Update the list of API error codes and their translations;Feature;Medium;Rudie added more API error codes, we should update our list as well to match it
+doct0r/LanguageApp; Refactoring Profile Screen in Kotlin;Story;Medium;"Description
 
 Scenarios
 
@@ -330,7 +330,7 @@ When all stories have status ""Discovery Ready for Design/Development""
 - Testing coordinated by Test Manager
 - Sign-off Test Manager: Story to ""Done""
 - - - - - - - END DEVELOPMENT - - - - - - -"
- Intelligent flow - Tutorial;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+doct0r/LanguageApp; Intelligent flow - Tutorial;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
 
 {*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the tutorial screen accordingly.  
 
@@ -359,7 +359,7 @@ Figma link that describes the intended behaviour: 
 
 # Open the tutorial by clicking on the t{color:#de350b}he help screen on the camera page{color}*, {color:#de350b}from home, map or webshop page, the tab is set to the last stored parameter (depending on which page the user visited last{color} 
 # The above should hold regardless whether the user is logged in or out (or changing logins in the meantime)"
- Intelligent flow - Manual measurements;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+doct0r/LanguageApp; Intelligent flow - Manual measurements;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
 
 {*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the manual measurement screen accordingly.  
 
@@ -393,7 +393,7 @@ Figma link that describes the intended behaviour: 
 # Test scenarios 1-2 (incl. the note) below the ""Manual input 2.0"" screen in Figma [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
 # When the user reopens the app after closing it and the manual measurement is still open, the tab is set to the same parameter as before closing the app. 
 # All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime)."
- Intelligent flow - Home screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+doct0r/LanguageApp; Intelligent flow - Home screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
 
 {*}Description{*}:  Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the tabs on the Home Screen accordingly.  
 
@@ -426,7 +426,7 @@ Figma link that describes the intended behaviour: 
 # Test scenarios 1-4 below the ""Home 2.2"" screen in Figma [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design]  
 # When the user reopens the app after closing it and lands on the Home Screen, the tab is set to the last stored parameter before closing the app. 
 # All of the above should remain regardless whether the user is logged in or logged out (or changing logins in the meantime) "
- Read & Write the parameter for intelligent flow;Story;Medium;"*Description:* 
+doct0r/LanguageApp; Read & Write the parameter for intelligent flow;Story;Medium;"*Description:* 
 In order to make the flow more intuitive and switch tabs based on the last used parameter, the app needs to store the parameter that was used most recently. 
 
 Basic functionality for this feature includes reading and writing the parameter. 
@@ -455,7 +455,7 @@ Basic functionality for this feature includes reading and writing the parameter.
 Figma link that describes the intended behaviour:  
 
 [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8222-13018&mode=design] "
- Intelligent flow - Map screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
+doct0r/LanguageApp; Intelligent flow - Map screen;Story;Medium;"{*}Dependency{*}: SADA-1370 - For this story, we need the ability to read and write the parameter in the app 
 
 {*}Description{*}: Making the flow between screens more intuitive by remembering what parameter the user was interested in last and setting the filter on the map screen accordingly.  
 
@@ -491,7 +491,7 @@ Figma link that describes the intended behaviour: 
 ## change filter at the map 
 # When the user reopens the app after closing it and the map screen is still open, the tab is set to the same parameter as before closing the app. 
 # All of the above should hold regardless whether the user is logged in or out (or changing logins in the meantime)."
- Investigate app secrets security;Spike;Medium;"This spike is timeboxed to 4 hours. 
+doct0r/LanguageApp; Investigate app secrets security;Spike;Medium;"This spike is timeboxed to 4 hours. 
 
 We should investigate the following: 
 * Move Gradle file secrets (cognito and signature) to GitHub secrets or is there a better alternative? 
@@ -499,19 +499,19 @@ We should investigate the following:
 * Remove unused secrets (SEGES test and prod) - no need to investigate anything, just add to the followup story 
 * Create new fastlane build scripts - no need to investigate anything, just add to the followup story 
  "
- Update map filter;Story;Medium;"We will be updating the filter feature on the map screen so that all filter options are on 1 screen. 
+doct0r/LanguageApp; Update map filter;Story;Medium;"We will be updating the filter feature on the map screen so that all filter options are on 1 screen. 
 
 [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9081%3A113669&mode=dev&t=piOAXsrqd5BvhfI9-1] 
 
  "
- Updated map date picker;Story;Medium;"The date picker will be updated to allow users to more simply select the correct date range where they want to see their measurements on the map. 
+doct0r/LanguageApp; Updated map date picker;Story;Medium;"The date picker will be updated to allow users to more simply select the correct date range where they want to see their measurements on the map. 
 
 This will include removing the arrow from the current filter, removing the slider and adding a calendar for Week, Month and Year. 
 
 [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=9152%3A4103&mode=dev&t=R02ut8Cldl5BH5Pj-1] 
 
  "
- Edit username update;Story;Medium;"---------------------- 
+doct0r/LanguageApp; Edit username update;Story;Medium;"---------------------- 
 Description: 
 ---------------------- 
 To deter users from changing their username multiple times, we are moving this feature to the menu, along with log out and delete account. 
@@ -539,10 +539,10 @@ Logged in: Yes/No
 Pre-reqs: Set language to; user has not previously checked ""don't show this again” on the Tutorial Page, Have submitted measurements on home screen 
 Test cases 
 Screen:"
- Update target SDK;Story;Medium;"Target the latest Android API 
+doct0r/LanguageApp; Update target SDK;Story;Medium;"Target the latest Android API 
 
 Make sure nothing breaks"
- Group remains as default when user leaves/is deleted from the group;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.2.0 (13080) 
+doct0r/LanguageApp; Group remains as default when user leaves/is deleted from the group;Bug;Medium;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.2.0 (13080) 
 
 Group remains as default when user leaves/is deleted from the group both in Settings and on Measurement details (during create).  
 
@@ -574,7 +574,7 @@ _2 scenarios (can be split to sub-tasks)_
 * *2: Only the* *""Failed to add measurement to group"" message is shown and it is shown for a bit longer so user has time to read* 
 
  "
- Tapping on a submitted Salinity measurement on home screen shows no internet error;Bug;Medium;"Tapping on some submitted Salinity measurement on home screen shows no internet error.  
+doct0r/LanguageApp; Tapping on a submitted Salinity measurement on home screen shows no internet error;Bug;Medium;"Tapping on some submitted Salinity measurement on home screen shows no internet error.  
 
 *Current* 
 * Tap on a specific area of the field of a salinity measurement on the home screen 
@@ -584,7 +584,7 @@ _2 scenarios (can be split to sub-tasks)_
 * *The measurement details is shown* 
 
  "
- Update / add (alt) text throughout the app;Story;Medium;"Provide alternative text for meaningful images, logos, icons as well as all buttons need to be voiced over. 
+doct0r/LanguageApp; Update / add (alt) text throughout the app;Story;Medium;"Provide alternative text for meaningful images, logos, icons as well as all buttons need to be voiced over. 
 * Via your measurements : 
 ** in ""your measurements"" scre{color:#172b4d}ens : describe arrow button on the measurements to see details ""button for more details"" {color} 
 ** {color:#172b4d}in the ""measurement details"" +edit+ screens : describe arrow button for sample type and soil type ""button to open [soil type/sample type] options"" {color} 
@@ -627,28 +627,28 @@ _2 scenarios (can be split to sub-tasks)_
   
 
  "
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
-;;;
- Soil Nmin - new measurement;Story;Medium;"Update the interface and flow of a user taking a Soil Nmin measurement 
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp;;;;
+doct0r/LanguageApp; Soil Nmin - new measurement;Story;Medium;"Update the interface and flow of a user taking a Soil Nmin measurement 
 
 Taking a measurement and setting Soil Nmin: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=10115-12338&mode=design&t=FkhUMO4d1voljAYG-4]  
 
  "
- Soil Nmin - view/edit measurement;Story;Medium;"Update Viewing Soil Nmin measurement from home/map: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=6311%3A39568&t=tKvb0PCjpew1m7N8-1] 
+doct0r/LanguageApp; Soil Nmin - view/edit measurement;Story;Medium;"Update Viewing Soil Nmin measurement from home/map: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=6311%3A39568&t=tKvb0PCjpew1m7N8-1] 
 
   
 
  "
- Add info screen to NO3/NO3-N switch on manual input screen;Story;Medium;"Description: 
+doct0r/LanguageApp; Add info screen to NO3/NO3-N switch on manual input screen;Story;Medium;"Description: 
 
 On the manual input screen, the user has the option to switch between NO3 and NO3-N for nitrate, but there is no explanation on what it means for users who are not familiar with the difference. Therefore, we should add the info screen that we also use in the settings to explain the difference between NO3 and NO3-N. (See attached photos) 
 * add the (i) icon to the pop-up where you select between NO3 and NO3-N 
@@ -657,7 +657,7 @@ On the manual input screen, the user has the option to switch between NO3 and NO
   
 
 See Figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7245-39840&mode=design&t=v4Bcb4Yqhiel7OOx-4] "
-" The ""Tap here to add a description"" text is missing in edit mode";Bug;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12172); server: test 
+doct0r/LanguageApp;" The ""Tap here to add a description"" text is missing in edit mode";Bug;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12172); server: test 
 
 When editing a measurement that doesn't have a description there should be a text ""Tap here to add a description"" in the field. This text is missing.  
 
@@ -674,20 +674,20 @@ When editing a measurement that doesn't have a description there should be a tex
 * *The ""Tap here to add a description"" text is displayed in the description field* 
 
 *Figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7888-13009&mode=design&t=kee8vp3uwjrr7iiF-0]* "
- Refactor permission logic code for more readability within MainActivity.java;Story;Low;"""Things that pop right away: 
+doct0r/LanguageApp; Refactor permission logic code for more readability within MainActivity.java;Story;Low;"""Things that pop right away: 
 * function is huge (almost 100 lines) 
 * the outer switch only has 1 case... so it could be an if statement... 
 * there are too many nested condition statements making it quite difficult to read... 
 
 My suggestion would be to extract parts of if to new smaller functions with meaningful names and reuse where needed. Making it simples, smaller and easier to understand."""
-Keyboard input doesn't work when input field is out of focus;Bug;Low;"Tested on Samsung Galaxy S6, Android 7 
+doct0r/LanguageApp;Keyboard input doesn't work when input field is out of focus;Bug;Low;"Tested on Samsung Galaxy S6, Android 7 
 
 *Current behaviour* 
 
 When selecting the description field of a measurement, the keyboard doesn't work when the field is not visible in the screen. 
 
 In some cases, this can be a positive as you can't make mistakes typing blindly. In other cases, you are still not able to edit even after you can see the field, in which case you need to select another field first and then coming back to it. See the 2 attached videos."
- Update button design;Story;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12188); server: test 
+doct0r/LanguageApp; Update button design;Story;Low;"*Tested on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12188); server: test 
 
 Several buttons are missing a border:  
 # Clicking delete on a measurement in edit mode - *Cancel button* (screenshot 1) [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=5523-34775&mode=design&t=UfCDL9Qeti4bQCe9-0]  
@@ -695,8 +695,8 @@ Several buttons are missing a border: 
 # Measurement details after creating a measurement - *Cancel button* (screenshot 3) (can't find in Figma) {color:#ff8b00} [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=4743%3A31553&mode=design&t=cVU43Q4kLAFEaNyY-1]{color} 
 # Clicking cancel on measurement details screen after creating a measurement - *No button* (screenshot 4). (can't find in Figma) {color:#ff8b00}*Should be the same as the other 3 examples*{color} 
 # Cancel button on Tutorial accessed through + button. - *Cancel button* (screenshot 5) figma: [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=7163-39842&mode=design&t=vJcc5yHJGR6SN4Ri-0] "
-Add fade out to pages where users have to scroll;Story;Low;The disclaimer screen should have a fade in/out on the disclaimer screen (like in iOS) to make users aware that they can scroll
- Remove decimal on kg N/ha value on edit location screen;Bug;Lowest;"*Found on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12170); server: test  
+doct0r/LanguageApp;Add fade out to pages where users have to scroll;Story;Low;The disclaimer screen should have a fade in/out on the disclaimer screen (like in iOS) to make users aware that they can scroll
+doct0r/LanguageApp; Remove decimal on kg N/ha value on edit location screen;Bug;Lowest;"*Found on:* Android 14; Model: Google Pixel 6; app version 5.0.0 (12170); server: test  
 
 There is a decimal displayed on the kg N/ha value on the edit location screen when creating/editing a soil Nmin measurement. There should not be a decimal here.  
 
@@ -747,5 +747,5 @@ Test each case:
 * Tap on edit 
 * Tap the edit location button on the edit screen 
 * The kg N/ha value is displayed *without* a decimal (figma; [https://www.figma.com/file/cwHBJPrLZrdEtElxSckjR2/Final-Design?type=design&node-id=8604-14113&mode=design&t=3OZ96bCSf28dBoF9-0])"
- As a user I want all the webshop form data to be retained when navigating between screens;Story;Lowest;Currently only the personal details are retained, and only while inside the order equipment activity. 
-;;;
+doct0r/LanguageApp; As a user I want all the webshop form data to be retained when navigating between screens;Story;Lowest;Currently only the personal details are retained, and only while inside the order equipment activity. 
+;;;;
