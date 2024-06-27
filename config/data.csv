@@ -1,7 +1,7 @@
 ﻿Repository;Title;Labels;Priority;Project
 doct0r/LanguageApp; Remove auto log in when logging in with Google account;Story;High;Current behaviour: 
 
-When you have previously logged in with Google, and logged out again: the second time, and all times after that, when you log in with google, you get automatically logged in without having to input username or password. So in the case that someone changes their google details they can't change account. Even after having reinstalled the app multiple times and deleted all app data, you still log in automatically when pressing google log in.  
+When you have previously logged in with Google and logged out again: the second time and all times after that when you log in with google you get automatically logged in without having to input username or password. So in the case that someone changes their google details they can't change account. Even after having reinstalled the app multiple times and deleted all app data you still log in automatically when pressing google log in.  
 
 Desired behaviour: 
 
